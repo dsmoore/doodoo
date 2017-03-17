@@ -1,0 +1,167 @@
+/* line 1, ../scss/main.scss */
+body {
+  text-align: center;
+  font-family: courier;
+}
+
+/* line 6, ../scss/main.scss */
+h1 {
+  font-size: 25px;
+  position: fixed;
+  width: 100%;
+}
+
+/* line 12, ../scss/main.scss */
+#items {
+  position: relative;
+  top: 75px;
+  margin: 0 auto 75px auto;
+  padding: 0;
+  list-style: none;
+}
+/* line 21, ../scss/main.scss */
+#items li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #666;
+  transition: all .2s ease-in-out;
+}
+/* line 28, ../scss/main.scss */
+#items li a:hover {
+  color: #ddd;
+}
+/* line 32, ../scss/main.scss */
+#items li a:active {
+  text-decoration: line-through;
+  color: #ccc;
+}
+/* line 39, ../scss/main.scss */
+#items li:first-child {
+  font-size: 40px;
+}
+/* line 42, ../scss/main.scss */
+#items li:nth-child(2) {
+  font-size: 39px;
+}
+/* line 45, ../scss/main.scss */
+#items li:nth-child(3) {
+  font-size: 38px;
+}
+/* line 48, ../scss/main.scss */
+#items li:nth-child(4) {
+  font-size: 37px;
+}
+/* line 51, ../scss/main.scss */
+#items li:nth-child(5) {
+  font-size: 36px;
+}
+/* line 54, ../scss/main.scss */
+#items li:nth-child(6) {
+  font-size: 35px;
+}
+/* line 57, ../scss/main.scss */
+#items li:nth-child(7) {
+  font-size: 34px;
+}
+/* line 60, ../scss/main.scss */
+#items li:nth-child(8) {
+  font-size: 33px;
+}
+/* line 63, ../scss/main.scss */
+#items li:nth-child(9) {
+  font-size: 32px;
+}
+/* line 66, ../scss/main.scss */
+#items li:nth-child(10) {
+  font-size: 31px;
+}
+/* line 69, ../scss/main.scss */
+#items li:nth-child(11) {
+  font-size: 30px;
+}
+/* line 72, ../scss/main.scss */
+#items li:nth-child(12) {
+  font-size: 29px;
+}
+/* line 75, ../scss/main.scss */
+#items li:nth-child(13) {
+  font-size: 28px;
+}
+/* line 78, ../scss/main.scss */
+#items li:nth-child(14) {
+  font-size: 27px;
+}
+/* line 81, ../scss/main.scss */
+#items li:nth-child(15) {
+  font-size: 26px;
+}
+/* line 84, ../scss/main.scss */
+#items li:nth-child(16) {
+  font-size: 25px;
+}
+/* line 87, ../scss/main.scss */
+#items li:nth-child(17) {
+  font-size: 24px;
+}
+/* line 90, ../scss/main.scss */
+#items li:nth-child(18) {
+  font-size: 23px;
+}
+/* line 93, ../scss/main.scss */
+#items li:nth-child(19) {
+  font-size: 22px;
+}
+/* line 96, ../scss/main.scss */
+#items li:nth-child(20) {
+  font-size: 21px;
+}
+/* line 99, ../scss/main.scss */
+#items li:nth-child(21) {
+  font-size: 20px;
+}
+/* line 102, ../scss/main.scss */
+#items li:nth-child(22) {
+  font-size: 19px;
+}
+/* line 105, ../scss/main.scss */
+#items li:nth-child(23) {
+  font-size: 18px;
+}
+/* line 108, ../scss/main.scss */
+#items li:nth-child(24) {
+  font-size: 17px;
+}
+/* line 111, ../scss/main.scss */
+#items li:nth-child(25) {
+  font-size: 16px;
+}
+/* line 114, ../scss/main.scss */
+#items li:nth-child(26) {
+  font-size: 15px;
+}
+/* line 117, ../scss/main.scss */
+#items li:nth-child(27) {
+  font-size: 14px;
+}
+/* line 120, ../scss/main.scss */
+#items li:nth-child(28) {
+  font-size: 13px;
+}
+/* line 123, ../scss/main.scss */
+#items li:nth-child(29) {
+  font-size: 12px;
+}
+/* line 126, ../scss/main.scss */
+#items li:nth-child(30) {
+  font-size: 11px;
+}
+
+/* line 134, ../scss/main.scss */
+footer {
+  font-size: 10px;
+}
+/* line 136, ../scss/main.scss */
+footer a {
+  color: #6868da;
+}
