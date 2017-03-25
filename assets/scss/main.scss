@@ -9,11 +9,36 @@ h1{
  width: 100%;
 }
 
-#items{
+form{
 
  position: relative;
  top: 75px;
  margin: 0 auto 75px auto;
+
+}
+
+form button{
+  visibility: hidden;
+  width: 0px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+form input{
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: calc(100% - 20px);
+  max-width: 500px;
+
+   text-align: center;
+   font-family: courier;
+   font-size: 20px;
+
+}
+
+#items{
+
  padding: 0;
 
  list-style: none;
@@ -23,7 +48,7 @@ h1{
   padding: 10px;
   text-decoration: none;
   color: #666;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 
   &:hover{
    color: #ddd;
@@ -132,7 +157,8 @@ h1{
 
 // Footer
 footer{
- font-size: 10px;
+  padding-top: 75px;
+  font-size: 10px;
  a{
   color: #6868da;
  }
