@@ -1,0 +1,248 @@
+/* line 1, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: sans-serif;
+}
+
+/* line 10, ../scss/_reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 15, ../scss/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 19, ../scss/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 4, ../scss/_display.scss */
+body {
+  text-align: center;
+}
+
+/* line 8, ../scss/_display.scss */
+h1 {
+  font-family: "filson-soft", sans-serif;
+  font-size: 50px;
+  position: fixed;
+  width: 100%;
+  font-weight: 700;
+  top: 25px;
+}
+
+/* line 17, ../scss/_display.scss */
+p {
+  font-family: "filson-soft", sans-serif;
+}
+
+/* line 22, ../scss/_display.scss */
+footer {
+  font-weight: 700;
+  padding-top: 75px;
+  font-size: 10px;
+}
+/* line 26, ../scss/_display.scss */
+footer a {
+  color: #6868da;
+}
+/* line 28, ../scss/_display.scss */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* line 35, ../scss/_display.scss */
+::selection {
+  background: #6868da;
+  color: #fff;
+}
+
+/* line 39, ../scss/_display.scss */
+::-moz-selection {
+  background: #6868da;
+  color: #fff;
+}
+
+/* line 1, ../scss/_main.scss */
+form {
+  position: relative;
+  top: 100px;
+  margin: 0 auto 75px auto;
+}
+
+/* line 7, ../scss/_main.scss */
+form button {
+  display: block;
+  visibility: hidden;
+  width: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 15, ../scss/_main.scss */
+form input {
+  padding: 10px;
+  border: none;
+  border-bottom: 3px solid #ccc;
+  width: calc(100% - 20px);
+  max-width: 500px;
+  text-align: center;
+  font-family: "filson-soft", sans-serif;
+  font-size: 20px;
+}
+
+/* line 27, ../scss/_main.scss */
+#items {
+  margin: 25px auto;
+  padding: 0;
+  list-style: none;
+}
+/* line 32, ../scss/_main.scss */
+#items li a {
+  font-family: "filson-soft", sans-serif;
+  font-weight: 700;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #666;
+  transition: all .1s ease-in-out;
+}
+/* line 41, ../scss/_main.scss */
+#items li a:hover {
+  color: #ddd;
+}
+/* line 45, ../scss/_main.scss */
+#items li a:active {
+  text-decoration: line-through;
+  color: #ccc;
+  cursor: wait;
+}
+/* line 53, ../scss/_main.scss */
+#items li:first-child {
+  font-size: 40px;
+}
+/* line 56, ../scss/_main.scss */
+#items li:nth-child(2) {
+  font-size: 39px;
+}
+/* line 59, ../scss/_main.scss */
+#items li:nth-child(3) {
+  font-size: 38px;
+}
+/* line 62, ../scss/_main.scss */
+#items li:nth-child(4) {
+  font-size: 37px;
+}
+/* line 65, ../scss/_main.scss */
+#items li:nth-child(5) {
+  font-size: 36px;
+}
+/* line 68, ../scss/_main.scss */
+#items li:nth-child(6) {
+  font-size: 35px;
+}
+/* line 71, ../scss/_main.scss */
+#items li:nth-child(7) {
+  font-size: 34px;
+}
+/* line 74, ../scss/_main.scss */
+#items li:nth-child(8) {
+  font-size: 33px;
+}
+/* line 77, ../scss/_main.scss */
+#items li:nth-child(9) {
+  font-size: 32px;
+}
+/* line 80, ../scss/_main.scss */
+#items li:nth-child(10) {
+  font-size: 31px;
+}
+/* line 83, ../scss/_main.scss */
+#items li:nth-child(11) {
+  font-size: 30px;
+}
+/* line 86, ../scss/_main.scss */
+#items li:nth-child(12) {
+  font-size: 29px;
+}
+/* line 89, ../scss/_main.scss */
+#items li:nth-child(13) {
+  font-size: 28px;
+}
+/* line 92, ../scss/_main.scss */
+#items li:nth-child(14) {
+  font-size: 27px;
+}
+/* line 95, ../scss/_main.scss */
+#items li:nth-child(15) {
+  font-size: 26px;
+}
+/* line 98, ../scss/_main.scss */
+#items li:nth-child(16) {
+  font-size: 25px;
+}
+/* line 101, ../scss/_main.scss */
+#items li:nth-child(17) {
+  font-size: 24px;
+}
+/* line 104, ../scss/_main.scss */
+#items li:nth-child(18) {
+  font-size: 23px;
+}
+/* line 107, ../scss/_main.scss */
+#items li:nth-child(19) {
+  font-size: 22px;
+}
+/* line 110, ../scss/_main.scss */
+#items li:nth-child(20) {
+  font-size: 21px;
+}
+/* line 113, ../scss/_main.scss */
+#items li:nth-child(21) {
+  font-size: 20px;
+}
+/* line 116, ../scss/_main.scss */
+#items li:nth-child(22) {
+  font-size: 19px;
+}
+/* line 119, ../scss/_main.scss */
+#items li:nth-child(23) {
+  font-size: 18px;
+}
+/* line 122, ../scss/_main.scss */
+#items li:nth-child(24) {
+  font-size: 17px;
+}
+/* line 125, ../scss/_main.scss */
+#items li:nth-child(25) {
+  font-size: 16px;
+}
+/* line 128, ../scss/_main.scss */
+#items li:nth-child(26) {
+  font-size: 15px;
+}
+/* line 131, ../scss/_main.scss */
+#items li:nth-child(27) {
+  font-size: 14px;
+}
+/* line 134, ../scss/_main.scss */
+#items li:nth-child(28) {
+  font-size: 13px;
+}
+/* line 137, ../scss/_main.scss */
+#items li:nth-child(29) {
+  font-size: 12px;
+}
+/* line 140, ../scss/_main.scss */
+#items li:nth-child(30) {
+  font-size: 11px;
+}
