@@ -17,7 +17,11 @@ $( document ).ready(function() {
     $(this).remove();
   });
 
-  $( "#items" ).sortable();
+  $('#items').sortable({
+      placeholder: "ui-state-highlight",
+      scroll: true
+  });
+
   $( "#items" ).disableSelection();
 
   $('body').on('click', 'a.black', function() {
