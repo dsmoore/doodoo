@@ -1,5 +1,19 @@
 #app{
+
   padding: 10px;
+
+  @media screen and (max-width: $break-small) {
+
+    #items{
+      // padding-left: 30px;
+      // padding-right: 30px;
+      // li a{
+      //   transform: scale(.8);
+      // }
+    }
+
+  }
+
 }
 
 form{
