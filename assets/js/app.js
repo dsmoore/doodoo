@@ -3,7 +3,7 @@ $( document ).ready(function() {
   $('form').submit(function () {
     var task = $.trim($('input').val());
     if (task === '') {
-        alert('Ooops! Make sure you add an item.');
+        alertify.alert('Ooops! Make sure you add an item.');
         return false;
     } else {
       var new_task = $('#input').val();
