@@ -7,11 +7,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<!--  <script type="text/javascript" src="assets/js/jquery-3.2.0.slim.min.js"></script>
- -->
-
-   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script src="assets/js/jquery-1.12.4.min.js"></script>
+ <script src="assets/js/jquery-ui.min.js"></script>
+ <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
  <script type="text/javascript" src="assets/js/app.js"></script>
 
   <script src="https://use.typekit.net/wsq6jmj.js"></script>
@@ -20,11 +18,22 @@
 </head>
 <body>
 
-<div id="app">
+<div id="app" class="black">
 
-  <h1>Doo Doo</h1>
+  <h1>DooDoo.io</h1>
+
+  <nav class="colors">
+  <ul>
+    <li>
+      <a href="javascript:;" class="black active">&bull;</a>
+      <a href="javascript:;" class="purple">&bull;</a>
+      <a href="javascript:;" class="red">&bull;</a>
+    </li>
+  </ul>
+  </nav>
+
   <form>
-    <input type="text" id="input" placeholder="Add some shit...">
+    <input type="text" id="input" placeholder="Type then hit enter...">
     <ul id="items">
     </ul>
   </form>
@@ -32,7 +41,7 @@
 </div>
 
  <footer>
-  <p>A <a href="http://dereksmoore.com">Derek S. Moore</a> joint.</p>
+  <p>A <a href="http://dereksmoore.com" target="_blank">Derek S. Moore</a> joint.</p>
  </footer>
 
 </body>
