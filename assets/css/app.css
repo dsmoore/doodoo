@@ -425,164 +425,85 @@ form input:focus {
   cursor: -webkit-grab;
 }
 /* line 108, ../scss/_main.scss */
+#items li.ui-state-highlight {
+  height: 50px;
+  opacity: .2;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+/* line 117, ../scss/_main.scss */
 #items li:first-child {
   font-size: 40px;
 }
-/* line 111, ../scss/_main.scss */
+/* line 120, ../scss/_main.scss */
 #items li:nth-child(2) {
-  font-size: 39px;
-}
-/* line 114, ../scss/_main.scss */
-#items li:nth-child(3) {
   font-size: 38px;
 }
-/* line 117, ../scss/_main.scss */
-#items li:nth-child(4) {
-  font-size: 37px;
-}
-/* line 120, ../scss/_main.scss */
-#items li:nth-child(5) {
+/* line 123, ../scss/_main.scss */
+#items li:nth-child(3) {
   font-size: 36px;
 }
-/* line 123, ../scss/_main.scss */
-#items li:nth-child(6) {
-  font-size: 35px;
-}
 /* line 126, ../scss/_main.scss */
-#items li:nth-child(7) {
+#items li:nth-child(4) {
   font-size: 34px;
 }
 /* line 129, ../scss/_main.scss */
-#items li:nth-child(8) {
-  font-size: 33px;
-}
-/* line 132, ../scss/_main.scss */
-#items li:nth-child(9) {
+#items li:nth-child(5) {
   font-size: 32px;
 }
-/* line 135, ../scss/_main.scss */
-#items li:nth-child(10) {
-  font-size: 31px;
-}
-/* line 138, ../scss/_main.scss */
-#items li:nth-child(11) {
+/* line 132, ../scss/_main.scss */
+#items li:nth-child(6) {
   font-size: 30px;
 }
-/* line 141, ../scss/_main.scss */
-#items li:nth-child(12) {
-  font-size: 29px;
-}
-/* line 144, ../scss/_main.scss */
-#items li:nth-child(13) {
+/* line 135, ../scss/_main.scss */
+#items li:nth-child(7) {
   font-size: 28px;
 }
-/* line 147, ../scss/_main.scss */
-#items li:nth-child(14) {
-  font-size: 27px;
-}
-/* line 150, ../scss/_main.scss */
-#items li:nth-child(15) {
+/* line 138, ../scss/_main.scss */
+#items li:nth-child(8) {
   font-size: 26px;
 }
-/* line 153, ../scss/_main.scss */
-#items li:nth-child(16) {
-  font-size: 25px;
-}
-/* line 156, ../scss/_main.scss */
-#items li:nth-child(17) {
+/* line 141, ../scss/_main.scss */
+#items li:nth-child(9) {
   font-size: 24px;
 }
-/* line 159, ../scss/_main.scss */
-#items li:nth-child(18) {
-  font-size: 23px;
-}
-/* line 162, ../scss/_main.scss */
-#items li:nth-child(19) {
+/* line 144, ../scss/_main.scss */
+#items li:nth-child(10) {
   font-size: 22px;
 }
-/* line 165, ../scss/_main.scss */
-#items li:nth-child(20) {
-  font-size: 21px;
-}
-/* line 168, ../scss/_main.scss */
-#items li:nth-child(21) {
+/* line 147, ../scss/_main.scss */
+#items li:nth-child(11) {
   font-size: 20px;
 }
-/* line 171, ../scss/_main.scss */
-#items li:nth-child(22) {
-  font-size: 19px;
-}
-/* line 174, ../scss/_main.scss */
-#items li:nth-child(23) {
+/* line 150, ../scss/_main.scss */
+#items li:nth-child(12) {
   font-size: 18px;
 }
-/* line 177, ../scss/_main.scss */
-#items li:nth-child(24) {
-  font-size: 17px;
-}
-/* line 180, ../scss/_main.scss */
-#items li:nth-child(25) {
+/* line 153, ../scss/_main.scss */
+#items li:nth-child(13) {
   font-size: 16px;
 }
-/* line 183, ../scss/_main.scss */
-#items li:nth-child(26) {
-  font-size: 15px;
-}
-/* line 186, ../scss/_main.scss */
-#items li:nth-child(27) {
+/* line 156, ../scss/_main.scss */
+#items li:nth-child(14) {
   font-size: 14px;
 }
-/* line 189, ../scss/_main.scss */
-#items li:nth-child(28) {
-  font-size: 13px;
-}
-/* line 192, ../scss/_main.scss */
-#items li:nth-child(29) {
+/* line 159, ../scss/_main.scss */
+#items li:nth-child(15) {
   font-size: 12px;
 }
-/* line 195, ../scss/_main.scss */
-#items li:nth-child(30) {
-  font-size: 11px;
-}
-/* line 198, ../scss/_main.scss */
-#items li:nth-child(31) {
+/* line 162, ../scss/_main.scss */
+#items li:nth-child(16) {
   font-size: 10px;
 }
-/* line 201, ../scss/_main.scss */
-#items li:nth-child(32) {
-  font-size: 9px;
-}
-/* line 204, ../scss/_main.scss */
-#items li:nth-child(33) {
+/* line 165, ../scss/_main.scss */
+#items li:nth-child(16) {
   font-size: 8px;
 }
-/* line 207, ../scss/_main.scss */
-#items li:nth-child(34) {
-  font-size: 7px;
-}
-/* line 210, ../scss/_main.scss */
-#items li:nth-child(35) {
-  font-size: 6px;
-}
-/* line 213, ../scss/_main.scss */
-#items li:nth-child(36) {
-  font-size: 5px;
-}
-/* line 216, ../scss/_main.scss */
-#items li:nth-child(37) {
-  font-size: 4px;
-}
-/* line 219, ../scss/_main.scss */
-#items li:nth-child(38) {
-  font-size: 3px;
-}
-/* line 222, ../scss/_main.scss */
-#items li:nth-child(39) {
-  font-size: 2px;
-}
-/* line 225, ../scss/_main.scss */
-#items li:nth-child(40) {
-  font-size: 1px;
+/* line 168, ../scss/_main.scss */
+#items li {
+  font-size: 8px;
 }
 
 /* line 1, ../scss/_color-nav.scss */
@@ -624,23 +545,36 @@ nav.colors ul li a.purple {
 #app.black #items li a {
   background: #000;
 }
-/* line 17, ../scss/_colors.scss */
+/* line 16, ../scss/_colors.scss */
+#app.black li.ui-state-highlight {
+  opacity: .1;
+  background: #000;
+}
+/* line 23, ../scss/_colors.scss */
 #app.purple form input {
   border-color: #6868da;
   outline: #6868da;
   color: #6868da;
 }
-/* line 23, ../scss/_colors.scss */
+/* line 29, ../scss/_colors.scss */
 #app.purple #items li a {
   background: #6868da;
 }
-/* line 28, ../scss/_colors.scss */
+/* line 33, ../scss/_colors.scss */
+#app.purple li.ui-state-highlight {
+  background: #6868da;
+}
+/* line 39, ../scss/_colors.scss */
 #app.red form input {
   border-color: #F14E5C;
   outline: #F14E5C;
   color: #F14E5C;
 }
-/* line 34, ../scss/_colors.scss */
+/* line 45, ../scss/_colors.scss */
 #app.red #items li a {
+  background: #F14E5C;
+}
+/* line 49, ../scss/_colors.scss */
+#app.red li.ui-state-highlight {
   background: #F14E5C;
 }

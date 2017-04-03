@@ -22,6 +22,10 @@ $( document ).ready(function() {
       scroll: true
   });
 
+  $('body').on('click', 'a.clear', function() {
+    localStorage.clear();
+  });
+
   $( "#items" ).disableSelection();
 
   $('body').on('click', 'a.black', function() {
@@ -53,5 +57,19 @@ $( document ).ready(function() {
     $('#app').removeClass('black red purple');
   });
 
-
 });
+
+// Local Storage
+function savetext () {
+  localStorage["thedoo"] = JSON.stringify($("#items").html());
+  }
+
+function startup () {
+   if (localStorage["thedoo"] != null) {
+      var contentsOfOldDiv = JSON.parse(localStorage["thedoo"]);
+      $("#items").html(contentsOfOldDiv);
+     }
+
+    self.setInterval (function () {savetext ()}, 1000); //call every second
+  }
+

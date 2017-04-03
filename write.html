@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Write.</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <script>
+      function savetext () {
+        var s = document.getElementById ("text").value;
+        if (s != localStorage.savedtext) {
+          localStorage.savedtext = s;
+          }
+        }
+      function run () {
+          if (localStorage.savedtext == undefined) {
+            localStorage.savedtext = "";
+            }
+          document.getElementById ("text").value = localStorage.savedtext;
+          self.setInterval (function () {savetext ()}, 1000); //call every second
+        }
+      </script>
+
+      <style type="text/css">
+        textarea{
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          border: none;
+          font-size: 18px;
+          line-height: 28px;
+          outline: none;
+
+          padding: 10% 20%;
+
+          color: #6868da;
+          text-shadow: 0px 0px 0px #000;
+          -webkit-text-fill-color: transparent;
+          font-family: 'Inconsolata', monospace;
+        }
+      </style>
+
+    </head>
+  <body>
+
+    <textarea id="text"></textarea>
+    <script>
+      run ();
+    </script>
+    </body>
+  </html>
+

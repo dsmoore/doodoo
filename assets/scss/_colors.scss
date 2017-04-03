@@ -13,6 +13,12 @@
     background: $black;
   }
 
+  &.black li.ui-state-highlight{
+    opacity: .1;
+    background: $black;
+  }
+
+
   // Purple
   &.purple form input{
     border-color: $purple;
@@ -24,6 +30,11 @@
     background: $purple;
   }
 
+  &.purple li.ui-state-highlight{
+    background: $purple;
+  }
+
+
   // Red
   &.red form input{
     border-color: $red;
@@ -34,5 +45,10 @@
   &.red #items li a{
     background: $red;
   }
+
+  &.red li.ui-state-highlight{
+    background: $red;
+  }
+
 
 }
