@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Write...</title>
+    <title>Write.</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,19 +31,22 @@
           bottom: 0;
           border: none;
           outline: none;
-          width: 100%;
 
           font-size: 18px;
           line-height: 28px;
 
           padding: 10%;
 
+          background-color: #fffdf7;
+          color: #6868da;
+          -webkit-text-fill-color: #333;
           font-family: 'Inconsolata', monospace;
         }
 
         ::selection {
           background: #6868da;
           color: #fff;
+          -webkit-text-fill-color: #fff;
         }
         ::-moz-selection {
           background: #6868da;
@@ -53,12 +56,14 @@
       </style>
 
     </head>
-  <body>
+<body>
 
-    <textarea id="text" autofocus placeholder="Go ahead, write something..."></textarea>
-    <script>
-      run ();
-    </script>
-    </body>
-  </html>
+  <textarea id="text" placeholder="Go head, write something..." autofocus></textarea>
+
+  <script>
+    run ();
+  </script>
+
+</body>
+</html>
 
