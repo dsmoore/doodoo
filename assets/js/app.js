@@ -67,13 +67,13 @@ $( document ).ready(function() {
 
 // Local Storage
 function savetext () {
-  localStorage["thedoo"] = JSON.stringify($("#items").html());
+  localStorage["all"] = JSON.stringify($("#all").html());
   }
 
 function startup () {
-   if (localStorage["thedoo"] != null) {
-      var contentsOfOldDiv = JSON.parse(localStorage["thedoo"]);
-      $("#items").html(contentsOfOldDiv);
+   if (localStorage["all"] != null) {
+      var contentsOfOldDiv = JSON.parse(localStorage["all"]);
+      $("#all").html(contentsOfOldDiv);
      }
 
     self.setInterval (function () {savetext ()}, 1000); //call every second
