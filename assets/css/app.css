@@ -434,76 +434,8 @@ form input:focus {
   border-radius: 8px;
 }
 /* line 117, ../scss/_main.scss */
-#items li:first-child {
-  font-size: 40px;
-}
-/* line 120, ../scss/_main.scss */
-#items li:nth-child(2) {
-  font-size: 38px;
-}
-/* line 123, ../scss/_main.scss */
-#items li:nth-child(3) {
-  font-size: 36px;
-}
-/* line 126, ../scss/_main.scss */
-#items li:nth-child(4) {
-  font-size: 34px;
-}
-/* line 129, ../scss/_main.scss */
-#items li:nth-child(5) {
-  font-size: 32px;
-}
-/* line 132, ../scss/_main.scss */
-#items li:nth-child(6) {
-  font-size: 30px;
-}
-/* line 135, ../scss/_main.scss */
-#items li:nth-child(7) {
-  font-size: 28px;
-}
-/* line 138, ../scss/_main.scss */
-#items li:nth-child(8) {
-  font-size: 26px;
-}
-/* line 141, ../scss/_main.scss */
-#items li:nth-child(9) {
-  font-size: 24px;
-}
-/* line 144, ../scss/_main.scss */
-#items li:nth-child(10) {
-  font-size: 22px;
-}
-/* line 147, ../scss/_main.scss */
-#items li:nth-child(11) {
-  font-size: 20px;
-}
-/* line 150, ../scss/_main.scss */
-#items li:nth-child(12) {
-  font-size: 18px;
-}
-/* line 153, ../scss/_main.scss */
-#items li:nth-child(13) {
-  font-size: 16px;
-}
-/* line 156, ../scss/_main.scss */
-#items li:nth-child(14) {
-  font-size: 14px;
-}
-/* line 159, ../scss/_main.scss */
-#items li:nth-child(15) {
-  font-size: 12px;
-}
-/* line 162, ../scss/_main.scss */
-#items li:nth-child(16) {
-  font-size: 10px;
-}
-/* line 165, ../scss/_main.scss */
-#items li:nth-child(16) {
-  font-size: 8px;
-}
-/* line 168, ../scss/_main.scss */
 #items li {
-  font-size: 8px;
+  font-size: 30px;
 }
 
 /* line 1, ../scss/_color-nav.scss */
