@@ -17,6 +17,12 @@ $( document ).ready(function() {
     $(this).remove();
   });
 
+
+  $('body').on('click', 'a.reset', function() {
+    $('#items li').remove();
+  });
+
+
   $('#items').sortable({
       placeholder: "ui-state-highlight",
       scroll: true
