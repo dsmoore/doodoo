@@ -28,10 +28,6 @@ $( document ).ready(function() {
 
   $( "#items" ).disableSelection();
 
-  document.body.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-  }, false);
-
   $('body').on('click', 'a.black', function() {
     $(this).toggleClass('active');
     $('#app').addClass('black');
