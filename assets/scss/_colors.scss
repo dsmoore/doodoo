@@ -2,6 +2,15 @@
 
 #app{
 
+  h1, input, a{
+    transition: all .1s ease-in-out;
+  }
+
+  h1 a{
+    text-decoration: none;
+
+  }
+
   // Black
   &.black form input{
     border-color: $black;
@@ -16,6 +25,9 @@
   &.black li.ui-state-highlight{
     opacity: .1;
     background: $black;
+  }
+  &.black footer a{
+    color: #ccc;
   }
 
 
@@ -36,6 +48,10 @@
 
 
   // Red
+  &.red footer a{
+    color: $red;
+  }
+
   &.red form input{
     border-color: $red;
     outline: $red;

@@ -38,34 +38,43 @@ h1 {
   font-weight: 700;
   top: 25px;
 }
+/* line 25, ../scss/_display.scss */
+h1 a {
+  font-family: "filson-soft", sans-serif;
+}
 
-/* line 27, ../scss/_display.scss */
+/* line 30, ../scss/_display.scss */
 p {
   font-family: "filson-soft", sans-serif;
 }
 
-/* line 32, ../scss/_display.scss */
+/* line 35, ../scss/_display.scss */
 footer {
+  font-family: "filson-soft", sans-serif;
   font-weight: 700;
   padding-top: 75px;
   font-size: 10px;
 }
-/* line 36, ../scss/_display.scss */
-footer a {
-  color: #6868da;
+/* line 40, ../scss/_display.scss */
+footer p a {
+  font-size: 10px;
 }
-/* line 38, ../scss/_display.scss */
-footer a:hover {
+/* line 42, ../scss/_display.scss */
+footer p a:hover {
   text-decoration: underline;
 }
+/* line 47, ../scss/_display.scss */
+footer .reset {
+  font-size: 24px;
+}
 
-/* line 45, ../scss/_display.scss */
+/* line 54, ../scss/_display.scss */
 ::selection {
   background: #6868da;
   color: #fff;
 }
 
-/* line 49, ../scss/_display.scss */
+/* line 58, ../scss/_display.scss */
 ::-moz-selection {
   background: #6868da;
   color: #fff;
@@ -337,14 +346,24 @@ footer a:hover {
 #app {
   padding: 10px;
 }
+@media screen and (max-width: 500px) {
+  /* line 7, ../scss/_main.scss */
+  #app h1 {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+}
 
-/* line 19, ../scss/_main.scss */
+/* line 27, ../scss/_main.scss */
 form {
   position: relative;
   margin: 25px auto;
 }
 
-/* line 24, ../scss/_main.scss */
+/* line 32, ../scss/_main.scss */
 form button {
   display: block;
   visibility: hidden;
@@ -353,7 +372,7 @@ form button {
   margin: 0;
 }
 
-/* line 32, ../scss/_main.scss */
+/* line 40, ../scss/_main.scss */
 form input {
   padding: 10px;
   border: none;
@@ -366,33 +385,33 @@ form input {
   font-size: 20px;
   transition: all .1s ease-in-out;
 }
-/* line 46, ../scss/_main.scss */
+/* line 54, ../scss/_main.scss */
 form input:focus {
   transform: scale(1.2);
 }
 @media screen and (max-width: 500px) {
-  /* line 51, ../scss/_main.scss */
+  /* line 59, ../scss/_main.scss */
   form input:focus {
     transform: scale(1);
   }
 }
 
-/* line 59, ../scss/_main.scss */
+/* line 67, ../scss/_main.scss */
 #items {
   margin: 25px auto;
   padding: 0;
   list-style: none;
 }
-/* line 64, ../scss/_main.scss */
+/* line 72, ../scss/_main.scss */
 #items.purple li a {
   background: #6868da;
   color: #fff;
 }
-/* line 69, ../scss/_main.scss */
+/* line 77, ../scss/_main.scss */
 #items li {
   margin-bottom: 5px;
 }
-/* line 73, ../scss/_main.scss */
+/* line 81, ../scss/_main.scss */
 #items li a {
   font-family: "filson-soft", sans-serif;
   font-weight: 700;
@@ -408,23 +427,23 @@ form input:focus {
   border-radius: 8px;
   width: auto;
 }
-/* line 90, ../scss/_main.scss */
+/* line 98, ../scss/_main.scss */
 #items li a:hover {
   transform: scale(0.95);
 }
-/* line 94, ../scss/_main.scss */
+/* line 102, ../scss/_main.scss */
 #items li a:active {
   transform: scale(1.1);
   text-decoration: line-through;
   cursor: wait;
 }
-/* line 102, ../scss/_main.scss */
+/* line 110, ../scss/_main.scss */
 #items li.ui-sortable-helper a {
   cursor: move;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-/* line 108, ../scss/_main.scss */
+/* line 116, ../scss/_main.scss */
 #items li.ui-state-highlight {
   height: 50px;
   opacity: .2;
@@ -433,16 +452,19 @@ form input:focus {
   margin-right: auto;
   border-radius: 8px;
 }
-/* line 117, ../scss/_main.scss */
+/* line 125, ../scss/_main.scss */
 #items li {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* line 1, ../scss/_color-nav.scss */
 nav.colors {
-  margin: 25px auto;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin: 0 auto;
 }
-/* line 5, ../scss/_color-nav.scss */
+/* line 7, ../scss/_color-nav.scss */
 nav.colors ul li a {
   line-height: 20px;
   display: inline-block;
@@ -450,63 +472,79 @@ nav.colors ul li a {
   height: 30px;
   font-size: 50px;
 }
-/* line 12, ../scss/_color-nav.scss */
+/* line 14, ../scss/_color-nav.scss */
 nav.colors ul li a.active, nav.colors ul li a:hover {
   transform: scale(1.5);
 }
-/* line 16, ../scss/_color-nav.scss */
+/* line 18, ../scss/_color-nav.scss */
 nav.colors ul li a.black {
   color: #000;
 }
-/* line 20, ../scss/_color-nav.scss */
+/* line 22, ../scss/_color-nav.scss */
 nav.colors ul li a.red {
   color: #F14E5C;
 }
-/* line 24, ../scss/_color-nav.scss */
+/* line 26, ../scss/_color-nav.scss */
 nav.colors ul li a.purple {
   color: #6868da;
 }
 
-/* line 6, ../scss/_colors.scss */
+/* line 5, ../scss/_colors.scss */
+#app h1, #app input, #app a {
+  transition: all .1s ease-in-out;
+}
+/* line 9, ../scss/_colors.scss */
+#app h1 a {
+  text-decoration: none;
+}
+/* line 15, ../scss/_colors.scss */
 #app.black form input {
   border-color: #000;
   outline: #000;
   color: #000;
 }
-/* line 12, ../scss/_colors.scss */
+/* line 21, ../scss/_colors.scss */
 #app.black #items li a {
   background: #000;
 }
-/* line 16, ../scss/_colors.scss */
+/* line 25, ../scss/_colors.scss */
 #app.black li.ui-state-highlight {
   opacity: .1;
   background: #000;
 }
-/* line 23, ../scss/_colors.scss */
+/* line 29, ../scss/_colors.scss */
+#app.black footer a {
+  color: #ccc;
+}
+/* line 35, ../scss/_colors.scss */
 #app.purple form input {
   border-color: #6868da;
   outline: #6868da;
   color: #6868da;
 }
-/* line 29, ../scss/_colors.scss */
+/* line 41, ../scss/_colors.scss */
 #app.purple #items li a {
   background: #6868da;
 }
-/* line 33, ../scss/_colors.scss */
+/* line 45, ../scss/_colors.scss */
 #app.purple li.ui-state-highlight {
   background: #6868da;
 }
-/* line 39, ../scss/_colors.scss */
+/* line 51, ../scss/_colors.scss */
+#app.red footer a {
+  color: #F14E5C;
+}
+/* line 55, ../scss/_colors.scss */
 #app.red form input {
   border-color: #F14E5C;
   outline: #F14E5C;
   color: #F14E5C;
 }
-/* line 45, ../scss/_colors.scss */
+/* line 61, ../scss/_colors.scss */
 #app.red #items li a {
   background: #F14E5C;
 }
-/* line 49, ../scss/_colors.scss */
+/* line 65, ../scss/_colors.scss */
 #app.red li.ui-state-highlight {
   background: #F14E5C;
 }
