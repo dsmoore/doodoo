@@ -4,6 +4,14 @@
 
   @media screen and (max-width: $break-small) {
 
+    h1{
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      font-size: 16px;
+      text-align: left;
+    }
+
     #items{
       // padding-left: 30px;
       // padding-right: 30px;
@@ -115,7 +123,7 @@ form input{
  }
 
  li{
-  font-size: 30px;
+  font-size: 20px;
  }
 
 

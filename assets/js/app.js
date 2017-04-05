@@ -7,7 +7,7 @@ $( document ).ready(function() {
         return false;
     } else {
       var new_task = $('#input').val();
-      $('#items').prepend('<li><a href="javascript:;">'+new_task+'</a></li>');
+      $('#items').prepend('<li><a href="javascript:;" class="handle">'+new_task+'</a></li>');
       $('#input').val('');
       return false;
     }
@@ -25,6 +25,7 @@ $( document ).ready(function() {
 
   $('#items').sortable({
       placeholder: "ui-state-highlight",
+      handle: ".handle",
       scroll: true
   });
 

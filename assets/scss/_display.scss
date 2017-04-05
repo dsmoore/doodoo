@@ -22,6 +22,9 @@ h1{
   width: 100%;
   font-weight: 700;
   top: 25px;
+  a{
+    font-family: $base-font;
+  }
 }
 
 p{
@@ -30,15 +33,21 @@ p{
 
 // Footer
 footer{
+  font-family: $base-font;
   font-weight: 700;
   padding-top: 75px;
   font-size: 10px;
- a{
-  color: $purple;
+  p a{
+  font-size: 10px;
   &:hover{
     text-decoration: underline;
   }
  }
+
+ .reset{
+  font-size: 24px;
+ }
+
 }
 
 // Hide selection
