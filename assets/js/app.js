@@ -18,19 +18,10 @@ $( document ).ready(function() {
   });
 
 
-  $('body').on('click', 'a.reset', function() {
-    $('#items li').remove();
-  });
-
-
   $('#items').sortable({
       placeholder: "ui-state-highlight",
       handle: ".handle",
       scroll: true
-  });
-
-  $('body').on('click', 'a.clear', function() {
-    localStorage.clear();
   });
 
   $( "#items" ).disableSelection();
@@ -72,6 +63,11 @@ function savetext () {
   }
 
 function startup () {
+
+    $('body').on('click', 'a.clear', function() {
+      $('#items li').remove();
+    });
+
    if (localStorage["all"] != null) {
       var contentsOfOldDiv = JSON.parse(localStorage["all"]);
       $("#all").html(contentsOfOldDiv);
