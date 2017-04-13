@@ -1,0 +1,49 @@
+.m-scene {
+  .scene_element {
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
+   .scene_element--delayed {
+    animation-delay: 0.25s;
+   }
+   .scene_element--delayed-long {
+    animation-delay: 0.5s;
+   }
+   .scene_element--delayed-longer {
+    animation-delay: 0.75s;
+   }
+   .scene_element--delayed-longest {
+    animation-delay: 1s;
+   }
+   .scene_element--delayed-longestest {
+    animation-delay: 1.25s;
+   }
+   .scene_element--delayed-longestestest {
+    animation-delay: 1.5s;
+   }
+   .scene_element--delayed-last {
+    animation-delay: 1.75s;
+   }
+  .scene_element--fadein {
+    animation-name: fadeIn;
+  }
+
+  .scene_element--fadeinup {
+    animation-name: fadeInUp;
+  }
+
+  .scene_element--fadeinright {
+    animation-name: fadeInRight;
+  }
+
+  .scene_element--fadeinleft {
+    animation-name: fadeInLeft;
+  }
+
+  &.is-exiting {
+      .scene_element {
+        animation-direction: alternate-reverse;
+      }
+  }
+}
