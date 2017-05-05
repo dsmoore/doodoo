@@ -15,6 +15,7 @@ $( document ).ready(function() {
 
   $('body').on('click', '#items li a', function() {
     $(this).remove();
+    localStorage.clear();
   });
 
 
@@ -30,30 +31,34 @@ $( document ).ready(function() {
     $(this).toggleClass('active');
     $('#app').addClass('black');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('yellow purple red');
+    $('#app').removeClass('rainbow purple red');
+    $('body').removeClass('rainbow');
   });
 
   $('body').on('click', 'a.red', function() {
     $(this).toggleClass('active');
     $('#app').addClass('red');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black yellow purple');
-
+    $('#app').removeClass('black rainbow purple');
+    $('body').removeClass('rainbow');
   });
 
     $('body').on('click', 'a.purple', function() {
     $(this).toggleClass('active');
     $('#app').addClass('purple');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black yellow red');
+    $('#app').removeClass('black rainbow red');
+    $('body').removeClass('rainbow');
   });
 
-  $('body').on('click', 'a.yellow', function() {
+  $('body').on('click', 'a.rainbow', function() {
     $(this).toggleClass('active');
-    $('#app').addClass('yellow');
+    $('#app').addClass('rainbow');
+    $('body').addClass('rainbow');
     $('nav.colors li a').not(this).removeClass('active');
     $('#app').removeClass('black red purple');
   });
+
 
 });
 
@@ -73,6 +78,6 @@ function startup () {
       $("#all").html(contentsOfOldDiv);
      }
 
-    self.setInterval (function () {savetext ()}, 1000); //call every second
+    // self.setInterval (function () {savetext ()}, 1000); //call every second
   }
 

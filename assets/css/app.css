@@ -25,12 +25,12 @@ a {
   text-decoration: none;
 }
 
-/* line 15, ../scss/_display.scss */
+/* line 21, ../scss/_display.scss */
 body {
   text-align: center;
 }
 
-/* line 19, ../scss/_display.scss */
+/* line 25, ../scss/_display.scss */
 h1 {
   font-family: "filson-soft", sans-serif;
   font-size: 50px;
@@ -38,43 +38,44 @@ h1 {
   font-weight: 700;
   top: 25px;
 }
-/* line 25, ../scss/_display.scss */
+/* line 31, ../scss/_display.scss */
 h1 a {
   font-family: "filson-soft", sans-serif;
 }
 
-/* line 30, ../scss/_display.scss */
+/* line 36, ../scss/_display.scss */
 p {
   font-family: "filson-soft", sans-serif;
 }
 
-/* line 35, ../scss/_display.scss */
-footer {
+/* line 41, ../scss/_display.scss */
+a.clear {
   font-family: "filson-soft", sans-serif;
-  font-weight: 700;
-  padding-top: 75px;
+  display: inline-block;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  color: #333;
+  background-color: #ddd;
+  border-radius: 5px;
+  transition: all .1s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   font-size: 10px;
 }
-/* line 40, ../scss/_display.scss */
-footer p a {
-  font-size: 10px;
-}
-/* line 42, ../scss/_display.scss */
-footer p a:hover {
-  text-decoration: underline;
-}
-/* line 47, ../scss/_display.scss */
-footer .reset {
-  font-size: 24px;
+/* line 55, ../scss/_display.scss */
+a.clear:active {
+  transform: scale(0.9);
 }
 
-/* line 54, ../scss/_display.scss */
+/* line 61, ../scss/_display.scss */
 ::selection {
   background: #6868da;
   color: #fff;
 }
 
-/* line 58, ../scss/_display.scss */
+/* line 65, ../scss/_display.scss */
 ::-moz-selection {
   background: #6868da;
   color: #fff;
@@ -512,39 +513,113 @@ nav.colors ul li a.purple {
   opacity: .1;
   background: #000;
 }
-/* line 29, ../scss/_colors.scss */
-#app.black footer a {
-  color: #ccc;
-}
-/* line 35, ../scss/_colors.scss */
+/* line 32, ../scss/_colors.scss */
 #app.purple form input {
   border-color: #6868da;
   outline: #6868da;
   color: #6868da;
 }
-/* line 41, ../scss/_colors.scss */
+/* line 38, ../scss/_colors.scss */
 #app.purple #items li a {
   background: #6868da;
 }
-/* line 45, ../scss/_colors.scss */
+/* line 42, ../scss/_colors.scss */
 #app.purple li.ui-state-highlight {
   background: #6868da;
 }
-/* line 51, ../scss/_colors.scss */
-#app.red footer a {
-  color: #F14E5C;
-}
-/* line 55, ../scss/_colors.scss */
+/* line 48, ../scss/_colors.scss */
 #app.red form input {
   border-color: #F14E5C;
   outline: #F14E5C;
   color: #F14E5C;
 }
-/* line 61, ../scss/_colors.scss */
+/* line 54, ../scss/_colors.scss */
 #app.red #items li a {
   background: #F14E5C;
 }
-/* line 65, ../scss/_colors.scss */
+/* line 58, ../scss/_colors.scss */
 #app.red li.ui-state-highlight {
   background: #F14E5C;
+}
+
+/* line 2, ../scss/_rainbow.scss */
+nav.colors li a.rainbow {
+  position: relative;
+  top: 3px;
+  text-indent: -9999px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/icon-rainbow.png) no-repeat center center;
+  background-size: 100% auto;
+}
+
+/* line 20, ../scss/_rainbow.scss */
+#app.rainbow ul#items li.ui-state-highlight {
+  opacity: .4;
+  background: #bd4fda;
+}
+/* line 25, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:first-child a, #app.rainbow ul#items li:nth-child(2) a {
+  background: #bd4fda;
+}
+/* line 28, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(3) a, #app.rainbow ul#items li:nth-child(4) a {
+  background: #e84ca4;
+}
+/* line 31, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(5) a, #app.rainbow ul#items li:nth-child(6) a {
+  background: #ea5973;
+}
+/* line 34, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(7) a, #app.rainbow ul#items li:nth-child(8) a {
+  background: #ec6d43;
+}
+/* line 37, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(9) a, #app.rainbow ul#items li:nth-child(10) a {
+  background: #f08b33;
+}
+/* line 40, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(11) a, #app.rainbow ul#items li:nth-child(12) a {
+  background: #f2b132;
+}
+/* line 43, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(13) a, #app.rainbow ul#items li:nth-child(14) a {
+  background: #d9c72a;
+}
+/* line 46, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(15) a, #app.rainbow ul#items li:nth-child(16) a {
+  background: #95c713;
+}
+/* line 50, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(17) a, #app.rainbow ul#items li:nth-child(18) a {
+  background: #bd4fda;
+}
+/* line 53, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(19) a, #app.rainbow ul#items li:nth-child(20) a {
+  background: #e84ca4;
+}
+/* line 56, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(21) a, #app.rainbow ul#items li:nth-child(22) a {
+  background: #ea5973;
+}
+/* line 59, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(23) a, #app.rainbow ul#items li:nth-child(24) a {
+  background: #ec6d43;
+}
+/* line 62, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(25) a, #app.rainbow ul#items li:nth-child(26) a {
+  background: #f08b33;
+}
+/* line 65, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(27) a, #app.rainbow ul#items li:nth-child(28) a {
+  background: #f2b132;
+}
+/* line 68, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(29) a, #app.rainbow ul#items li:nth-child(30) a {
+  background: #d9c72a;
+}
+/* line 71, ../scss/_rainbow.scss */
+#app.rainbow ul#items li:nth-child(31) a, #app.rainbow ul#items li:nth-child(32) a {
+  background: #95c713;
 }
