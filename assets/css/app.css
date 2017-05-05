@@ -402,17 +402,29 @@ form input:focus {
   margin: 25px auto;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
 }
-/* line 72, ../scss/_main.scss */
+/* line 74, ../scss/_main.scss */
 #items.purple li a {
   background: #6868da;
   color: #fff;
 }
-/* line 77, ../scss/_main.scss */
+/* line 79, ../scss/_main.scss */
 #items li {
   margin-bottom: 5px;
 }
 /* line 81, ../scss/_main.scss */
+#items li.done {
+  order: 100;
+}
+/* line 84, ../scss/_main.scss */
+#items li.done a {
+  color: #ccc;
+  background: transparent !Important;
+  text-decoration: line-through;
+}
+/* line 92, ../scss/_main.scss */
 #items li a {
   font-family: "filson-soft", sans-serif;
   font-weight: 700;
@@ -428,29 +440,23 @@ form input:focus {
   border-radius: 8px;
   width: auto;
 }
-/* line 98, ../scss/_main.scss */
-#items li a.done {
-  color: #ccc;
-  background: transparent !Important;
-  text-decoration: line-through;
-}
-/* line 104, ../scss/_main.scss */
+/* line 109, ../scss/_main.scss */
 #items li a:hover {
   transform: scale(0.95);
 }
-/* line 108, ../scss/_main.scss */
+/* line 113, ../scss/_main.scss */
 #items li a:active {
   transform: scale(1.1);
   text-decoration: line-through;
   cursor: wait;
 }
-/* line 116, ../scss/_main.scss */
+/* line 121, ../scss/_main.scss */
 #items li.ui-sortable-helper a {
   cursor: move;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-/* line 122, ../scss/_main.scss */
+/* line 127, ../scss/_main.scss */
 #items li.ui-state-highlight {
   height: 50px;
   opacity: .2;
@@ -459,7 +465,7 @@ form input:focus {
   margin-right: auto;
   border-radius: 8px;
 }
-/* line 131, ../scss/_main.scss */
+/* line 136, ../scss/_main.scss */
 #items li {
   font-size: 20px;
 }
