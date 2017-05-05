@@ -14,8 +14,7 @@ $( document ).ready(function() {
   });
 
   $('body').on('click', '#items li a', function() {
-    $(this).remove();
-    localStorage.clear();
+    $(this).addClass('done');
   });
 
 
@@ -31,34 +30,22 @@ $( document ).ready(function() {
     $(this).toggleClass('active');
     $('#app').addClass('black');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('rainbow purple red');
-    $('body').removeClass('rainbow');
+    $('#app').removeClass('purple red');
   });
 
   $('body').on('click', 'a.red', function() {
     $(this).toggleClass('active');
     $('#app').addClass('red');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black rainbow purple');
-    $('body').removeClass('rainbow');
+    $('#app').removeClass('black purple');
   });
 
     $('body').on('click', 'a.purple', function() {
     $(this).toggleClass('active');
     $('#app').addClass('purple');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black rainbow red');
-    $('body').removeClass('rainbow');
+    $('#app').removeClass('black red');
   });
-
-  $('body').on('click', 'a.rainbow', function() {
-    $(this).toggleClass('active');
-    $('#app').addClass('rainbow');
-    $('body').addClass('rainbow');
-    $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black red purple');
-  });
-
 
 });
 
@@ -78,6 +65,6 @@ function startup () {
       $("#all").html(contentsOfOldDiv);
      }
 
-    self.setInterval (function () {savetext ()}, 1000); //call every second
+    // self.setInterval (function () {savetext ()}, 1000); //call every second
   }
 
