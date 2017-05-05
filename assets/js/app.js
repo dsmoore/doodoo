@@ -14,7 +14,7 @@ $( document ).ready(function() {
   });
 
   $('body').on('click', '#items li a', function() {
-    $(this).addClass('done');
+    $(this).parent().toggleClass('done');
   });
 
 
@@ -57,7 +57,7 @@ function savetext () {
 function startup () {
 
     $('body').on('click', 'a.clear', function() {
-      $('#items li').remove();
+      $('#items li.done').remove();
     });
 
    if (localStorage["all"] != null) {

@@ -68,6 +68,8 @@ form input{
  margin: 25px auto;
  padding: 0;
  list-style: none;
+ display: flex;
+ flex-flow: column nowrap;
 
 &.purple li a{
   background: $purple;
@@ -76,6 +78,15 @@ form input{
 
  li{
   margin-bottom: 5px;
+  &.done{
+    order: 100;
+  }
+  &.done a{
+    color: #ccc;
+    background: transparent !Important;
+    text-decoration: line-through;
+  }
+
  }
 
  li a{
@@ -94,12 +105,6 @@ form input{
 
   border-radius: 8px;
   width: auto;
-
-  &.done{
-    color: #ccc;
-    background: transparent !Important;
-    text-decoration: line-through;
-  }
 
   &:hover{
     transform: scale(.95);
