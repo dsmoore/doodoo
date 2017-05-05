@@ -550,7 +550,7 @@ nav.colors li a.rainbow {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../images/icon-rainbow.png) no-repeat center center;
+  background: url(../images/icon-rainbow.svg) no-repeat center center;
   background-size: 100% auto;
 }
 
