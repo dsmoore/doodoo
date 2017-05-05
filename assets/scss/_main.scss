@@ -1,0 +1,131 @@
+#app{
+
+  padding: 10px;
+
+  @media screen and (max-width: $break-small) {
+
+    h1{
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    #items{
+      // padding-left: 30px;
+      // padding-right: 30px;
+      // li a{
+      //   transform: scale(.8);
+      // }
+    }
+
+  }
+
+}
+
+form{
+ position: relative;
+ margin: 25px auto;
+}
+
+form button{
+  display: block;
+  visibility: hidden;
+  width: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+form input{
+  padding: 10px;
+  border: none;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  width: calc(100% - 26px);
+  max-width: 500px;
+
+  text-align: center;
+  font-family: $base-font;
+  font-size: 20px;
+
+  transition: all .1s ease-in-out;
+
+  &:focus{
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: $break-small) {
+    &:focus{
+     transform: scale(1);
+    }
+  }
+
+
+}
+
+#items{
+ margin: 25px auto;
+ padding: 0;
+ list-style: none;
+
+&.purple li a{
+  background: $purple;
+  color: $white;
+}
+
+ li{
+  margin-bottom: 5px;
+ }
+
+ li a{
+  font-family: $base-font;
+  font-weight: 700;
+  display: inline-block;
+  word-wrap: break-word;
+  padding: 10px;
+  text-decoration: none;
+  color: $white;
+  transition: all .1s ease-in-out;
+
+  -webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+
+  border-radius: 8px;
+  width: auto;
+
+  &:hover{
+    transform: scale(.95);
+  }
+
+  &:active{
+   transform: scale(1.1);
+   text-decoration: line-through;
+   cursor: wait;
+  }
+
+ }
+
+ li.ui-sortable-helper a{
+   cursor: move;
+   cursor: -moz-grab;
+   cursor: -webkit-grab;
+ }
+
+ li.ui-state-highlight{
+  height: 50px;
+  opacity: .2;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+ }
+
+ li{
+  font-size: 20px;
+ }
+
+
+
+}

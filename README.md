@@ -1,4 +1,2 @@
-dereksmoore
-===========
-
-Mah personal site!
+# doodoo
+The repo for http://doodoo.io

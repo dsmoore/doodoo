@@ -1,4 +1,0 @@
-dereksmoore
-===========
-
-Mah personal site!
