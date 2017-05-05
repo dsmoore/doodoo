@@ -429,22 +429,28 @@ form input:focus {
   width: auto;
 }
 /* line 98, ../scss/_main.scss */
+#items li a.done {
+  color: #ccc;
+  background: transparent !Important;
+  text-decoration: line-through;
+}
+/* line 104, ../scss/_main.scss */
 #items li a:hover {
   transform: scale(0.95);
 }
-/* line 102, ../scss/_main.scss */
+/* line 108, ../scss/_main.scss */
 #items li a:active {
   transform: scale(1.1);
   text-decoration: line-through;
   cursor: wait;
 }
-/* line 110, ../scss/_main.scss */
+/* line 116, ../scss/_main.scss */
 #items li.ui-sortable-helper a {
   cursor: move;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-/* line 116, ../scss/_main.scss */
+/* line 122, ../scss/_main.scss */
 #items li.ui-state-highlight {
   height: 50px;
   opacity: .2;
@@ -453,7 +459,7 @@ form input:focus {
   margin-right: auto;
   border-radius: 8px;
 }
-/* line 125, ../scss/_main.scss */
+/* line 131, ../scss/_main.scss */
 #items li {
   font-size: 20px;
 }
@@ -540,86 +546,4 @@ nav.colors ul li a.purple {
 /* line 58, ../scss/_colors.scss */
 #app.red li.ui-state-highlight {
   background: #F14E5C;
-}
-
-/* line 2, ../scss/_rainbow.scss */
-nav.colors li a.rainbow {
-  position: relative;
-  top: 3px;
-  text-indent: -9999px;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background: url(../images/icon-rainbow.svg) no-repeat center center;
-  background-size: 100% auto;
-}
-
-/* line 20, ../scss/_rainbow.scss */
-#app.rainbow ul#items li.ui-state-highlight {
-  opacity: .4;
-  background: #bd4fda;
-}
-/* line 25, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:first-child a, #app.rainbow ul#items li:nth-child(2) a {
-  background: #bd4fda;
-}
-/* line 28, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(3) a, #app.rainbow ul#items li:nth-child(4) a {
-  background: #e84ca4;
-}
-/* line 31, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(5) a, #app.rainbow ul#items li:nth-child(6) a {
-  background: #ea5973;
-}
-/* line 34, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(7) a, #app.rainbow ul#items li:nth-child(8) a {
-  background: #ec6d43;
-}
-/* line 37, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(9) a, #app.rainbow ul#items li:nth-child(10) a {
-  background: #f08b33;
-}
-/* line 40, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(11) a, #app.rainbow ul#items li:nth-child(12) a {
-  background: #f2b132;
-}
-/* line 43, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(13) a, #app.rainbow ul#items li:nth-child(14) a {
-  background: #d9c72a;
-}
-/* line 46, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(15) a, #app.rainbow ul#items li:nth-child(16) a {
-  background: #95c713;
-}
-/* line 50, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(17) a, #app.rainbow ul#items li:nth-child(18) a {
-  background: #bd4fda;
-}
-/* line 53, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(19) a, #app.rainbow ul#items li:nth-child(20) a {
-  background: #e84ca4;
-}
-/* line 56, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(21) a, #app.rainbow ul#items li:nth-child(22) a {
-  background: #ea5973;
-}
-/* line 59, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(23) a, #app.rainbow ul#items li:nth-child(24) a {
-  background: #ec6d43;
-}
-/* line 62, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(25) a, #app.rainbow ul#items li:nth-child(26) a {
-  background: #f08b33;
-}
-/* line 65, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(27) a, #app.rainbow ul#items li:nth-child(28) a {
-  background: #f2b132;
-}
-/* line 68, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(29) a, #app.rainbow ul#items li:nth-child(30) a {
-  background: #d9c72a;
-}
-/* line 71, ../scss/_rainbow.scss */
-#app.rainbow ul#items li:nth-child(31) a, #app.rainbow ul#items li:nth-child(32) a {
-  background: #95c713;
 }

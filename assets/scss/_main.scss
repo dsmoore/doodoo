@@ -95,6 +95,12 @@ form input{
   border-radius: 8px;
   width: auto;
 
+  &.done{
+    color: #ccc;
+    background: transparent !Important;
+    text-decoration: line-through;
+  }
+
   &:hover{
     transform: scale(.95);
   }
