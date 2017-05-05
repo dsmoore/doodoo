@@ -26,9 +26,6 @@
     opacity: .1;
     background: $black;
   }
-  &.black footer a{
-    color: #ccc;
-  }
 
 
   // Purple
@@ -48,10 +45,6 @@
 
 
   // Red
-  &.red footer a{
-    color: $red;
-  }
-
   &.red form input{
     border-color: $red;
     outline: $red;
@@ -65,6 +58,5 @@
   &.red li.ui-state-highlight{
     background: $red;
   }
-
 
 }

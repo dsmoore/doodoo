@@ -15,11 +15,7 @@ $( document ).ready(function() {
 
   $('body').on('click', '#items li a', function() {
     $(this).remove();
-  });
-
-
-  $('body').on('click', 'a.reset', function() {
-    $('#items li').remove();
+    localStorage.clear();
   });
 
 
@@ -29,40 +25,40 @@ $( document ).ready(function() {
       scroll: true
   });
 
-  $('body').on('click', 'a.clear', function() {
-    localStorage.clear();
-  });
-
   $( "#items" ).disableSelection();
 
   $('body').on('click', 'a.black', function() {
     $(this).toggleClass('active');
     $('#app').addClass('black');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('yellow purple red');
+    $('#app').removeClass('rainbow purple red');
+    $('body').removeClass('rainbow');
   });
 
   $('body').on('click', 'a.red', function() {
     $(this).toggleClass('active');
     $('#app').addClass('red');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black yellow purple');
-
+    $('#app').removeClass('black rainbow purple');
+    $('body').removeClass('rainbow');
   });
 
     $('body').on('click', 'a.purple', function() {
     $(this).toggleClass('active');
     $('#app').addClass('purple');
     $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black yellow red');
+    $('#app').removeClass('black rainbow red');
+    $('body').removeClass('rainbow');
   });
 
-  $('body').on('click', 'a.yellow', function() {
+  $('body').on('click', 'a.rainbow', function() {
     $(this).toggleClass('active');
-    $('#app').addClass('yellow');
+    $('#app').addClass('rainbow');
+    $('body').addClass('rainbow');
     $('nav.colors li a').not(this).removeClass('active');
     $('#app').removeClass('black red purple');
   });
+
 
 });
 
@@ -72,6 +68,11 @@ function savetext () {
   }
 
 function startup () {
+
+    $('body').on('click', 'a.clear', function() {
+      $('#items li').remove();
+    });
+
    if (localStorage["all"] != null) {
       var contentsOfOldDiv = JSON.parse(localStorage["all"]);
       $("#all").html(contentsOfOldDiv);
