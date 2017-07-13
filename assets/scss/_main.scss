@@ -51,17 +51,6 @@ form input{
 
   transition: all .1s ease-in-out;
 
-  &:focus{
-    transform: scale(1.2);
-  }
-
-  @media screen and (max-width: $break-small) {
-    &:focus{
-     transform: scale(1);
-    }
-  }
-
-
 }
 
 #items{
@@ -70,6 +59,7 @@ form input{
  list-style: none;
  display: flex;
  flex-flow: column nowrap;
+ max-width: 530px;
 
 &.purple li a{
   background: $purple;
@@ -78,8 +68,24 @@ form input{
 
  li{
   margin-bottom: 5px;
+
+  span.handle{
+    display: inline-block;
+    border-right: 1px solid #fff;
+    padding: 11px;
+    margin-top: -10px;
+    margin-bottom: -12px;
+    margin-left: -10px;
+    margin-right: 10px;
+  }
+
   &.done{
     order: 100;
+  }
+  &.done{
+    span{
+      display: none;
+    }
   }
   &.done a{
     color: #ccc;
@@ -92,12 +98,14 @@ form input{
  li a{
   font-family: $base-font;
   font-weight: 700;
-  display: inline-block;
+  display: block;
   word-wrap: break-word;
   padding: 10px;
   text-decoration: none;
   color: $white;
   transition: all .1s ease-in-out;
+  text-align: left;
+
 
   -webkit-hyphens: auto;
    -moz-hyphens: auto;
@@ -107,13 +115,13 @@ form input{
   width: auto;
 
   &:hover{
-    transform: scale(.95);
+    // transform: scale(.95);
   }
 
   &:active{
-   transform: scale(1.1);
-   text-decoration: line-through;
-   cursor: wait;
+   transform: scale(1.025);
+   // text-decoration: line-through;
+   // cursor: wait;
   }
 
  }
@@ -127,7 +135,7 @@ form input{
  li.ui-state-highlight{
   height: 50px;
   opacity: .2;
-  max-width: 500px;
+  max-width: 530px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
