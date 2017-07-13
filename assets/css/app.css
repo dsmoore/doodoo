@@ -386,86 +386,86 @@ form input {
   font-size: 20px;
   transition: all .1s ease-in-out;
 }
-/* line 54, ../scss/_main.scss */
-form input:focus {
-  transform: scale(1.2);
-}
-@media screen and (max-width: 500px) {
-  /* line 59, ../scss/_main.scss */
-  form input:focus {
-    transform: scale(1);
-  }
-}
 
-/* line 67, ../scss/_main.scss */
+/* line 56, ../scss/_main.scss */
 #items {
   margin: 25px auto;
   padding: 0;
   list-style: none;
   display: flex;
   flex-flow: column nowrap;
+  max-width: 530px;
 }
-/* line 74, ../scss/_main.scss */
+/* line 64, ../scss/_main.scss */
 #items.purple li a {
   background: #6868da;
   color: #fff;
 }
-/* line 79, ../scss/_main.scss */
+/* line 69, ../scss/_main.scss */
 #items li {
   margin-bottom: 5px;
 }
-/* line 81, ../scss/_main.scss */
+/* line 72, ../scss/_main.scss */
+#items li span.handle {
+  display: inline-block;
+  border-right: 1px solid #fff;
+  padding: 11px;
+  margin-top: -10px;
+  margin-bottom: -12px;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+/* line 82, ../scss/_main.scss */
 #items li.done {
   order: 100;
 }
-/* line 84, ../scss/_main.scss */
+/* line 86, ../scss/_main.scss */
+#items li.done span {
+  display: none;
+}
+/* line 90, ../scss/_main.scss */
 #items li.done a {
   color: #ccc;
   background: transparent !Important;
   text-decoration: line-through;
 }
-/* line 92, ../scss/_main.scss */
+/* line 98, ../scss/_main.scss */
 #items li a {
   font-family: "filson-soft", sans-serif;
   font-weight: 700;
-  display: inline-block;
+  display: block;
   word-wrap: break-word;
   padding: 10px;
   text-decoration: none;
   color: #fff;
   transition: all .1s ease-in-out;
+  text-align: left;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
   border-radius: 8px;
   width: auto;
 }
-/* line 109, ../scss/_main.scss */
-#items li a:hover {
-  transform: scale(0.95);
-}
-/* line 113, ../scss/_main.scss */
-#items li a:active {
-  transform: scale(1.1);
-  text-decoration: line-through;
-  cursor: wait;
-}
 /* line 121, ../scss/_main.scss */
+#items li a:active {
+  transform: scale(1.025);
+}
+/* line 129, ../scss/_main.scss */
 #items li.ui-sortable-helper a {
   cursor: move;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-/* line 127, ../scss/_main.scss */
+/* line 135, ../scss/_main.scss */
 #items li.ui-state-highlight {
   height: 50px;
   opacity: .2;
-  max-width: 500px;
+  max-width: 530px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
 }
-/* line 136, ../scss/_main.scss */
+/* line 144, ../scss/_main.scss */
 #items li {
   font-size: 20px;
 }
