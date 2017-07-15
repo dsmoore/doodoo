@@ -44,7 +44,8 @@ form input{
   text-align: center;
   font-family: $base-font;
   font-size: 20px;
-
+  border-radius: 0px;
+  -webkit-style: none !important;
   transition: all .1s ease-in-out;
 
 }
