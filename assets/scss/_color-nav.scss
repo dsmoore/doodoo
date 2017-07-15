@@ -1,8 +1,9 @@
 nav.colors{
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   margin: 0 auto;
+  z-index: 2000;
 
   ul li a{
     line-height: 20px;
