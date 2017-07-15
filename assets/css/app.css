@@ -380,10 +380,12 @@ form input {
   text-align: center;
   font-family: "filson-soft", sans-serif;
   font-size: 20px;
+  border-radius: 0px;
+  -webkit-style: none !important;
   transition: all .1s ease-in-out;
 }
 
-/* line 52, ../scss/_main.scss */
+/* line 53, ../scss/_main.scss */
 #items {
   margin: 0 auto;
   padding: 0;
@@ -392,16 +394,16 @@ form input {
   flex-flow: column nowrap;
   max-width: 530px;
 }
-/* line 60, ../scss/_main.scss */
+/* line 61, ../scss/_main.scss */
 #items.purple li a {
   background: #6868da;
   color: #fff;
 }
-/* line 65, ../scss/_main.scss */
+/* line 66, ../scss/_main.scss */
 #items li {
   margin-bottom: 1px;
 }
-/* line 67, ../scss/_main.scss */
+/* line 68, ../scss/_main.scss */
 #items li span.handle {
   display: inline-block;
   border-right: 1px solid #fff;
@@ -411,21 +413,21 @@ form input {
   margin-left: -10px;
   margin-right: 10px;
 }
-/* line 77, ../scss/_main.scss */
+/* line 78, ../scss/_main.scss */
 #items li.done {
   order: 100;
 }
-/* line 81, ../scss/_main.scss */
+/* line 82, ../scss/_main.scss */
 #items li.done span {
   display: none;
 }
-/* line 85, ../scss/_main.scss */
+/* line 86, ../scss/_main.scss */
 #items li.done a {
   color: #a9a9a9;
   background: #efefef !important;
   text-decoration: line-through;
 }
-/* line 93, ../scss/_main.scss */
+/* line 94, ../scss/_main.scss */
 #items li a {
   font-family: "filson-soft", sans-serif;
   font-weight: 700;
@@ -441,17 +443,17 @@ form input {
   hyphens: auto;
   width: auto;
 }
-/* line 115, ../scss/_main.scss */
+/* line 116, ../scss/_main.scss */
 #items li a:active {
   transform: scale(1.025);
 }
-/* line 123, ../scss/_main.scss */
+/* line 124, ../scss/_main.scss */
 #items li.ui-sortable-helper a {
   cursor: move;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-/* line 129, ../scss/_main.scss */
+/* line 130, ../scss/_main.scss */
 #items li.ui-state-highlight {
   height: 50px;
   opacity: .2;
@@ -459,7 +461,7 @@ form input {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 137, ../scss/_main.scss */
+/* line 138, ../scss/_main.scss */
 #items li {
   font-size: 20px;
 }
