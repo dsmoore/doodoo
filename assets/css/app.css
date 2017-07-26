@@ -375,7 +375,7 @@ form input {
   border: none;
   border-bottom: 3px solid #000;
   width: calc(100% - 20px);
-  max-width: 510px;
+  max-width: 600px;
   margin: 0;
   text-align: center;
   font-family: "filson-soft", sans-serif;
@@ -392,7 +392,7 @@ form input {
   list-style: none;
   display: flex;
   flex-flow: column nowrap;
-  max-width: 530px;
+  max-width: 620px;
 }
 /* line 61, ../scss/_main.scss */
 #items.purple li a {
@@ -403,65 +403,70 @@ form input {
 #items li {
   margin-bottom: 1px;
 }
-/* line 68, ../scss/_main.scss */
+/* line 69, ../scss/_main.scss */
 #items li span.handle {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   border-right: 1px solid #fff;
-  padding: 11px;
-  margin-top: -10px;
-  margin-bottom: -12px;
-  margin-left: -10px;
-  margin-right: 10px;
+  padding: 0 11px;
+  margin-top: -3px;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
-/* line 78, ../scss/_main.scss */
+/* line 82, ../scss/_main.scss */
 #items li.done {
   order: 100;
 }
-/* line 82, ../scss/_main.scss */
+/* line 86, ../scss/_main.scss */
 #items li.done span {
   display: none;
 }
-/* line 86, ../scss/_main.scss */
+/* line 90, ../scss/_main.scss */
 #items li.done a {
   color: #a9a9a9;
   background: #efefef !important;
   text-decoration: line-through;
+  padding-left: 10px;
 }
-/* line 94, ../scss/_main.scss */
+/* line 99, ../scss/_main.scss */
 #items li a {
   font-family: "filson-soft", sans-serif;
   font-weight: 700;
   display: block;
   word-wrap: break-word;
-  padding: 10px;
+  padding: 10px 10px 10px 60px;
   text-decoration: none;
   color: #fff;
   transition: all .1s ease-in-out;
   text-align: left;
+  position: relative;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
   width: auto;
 }
-/* line 116, ../scss/_main.scss */
+/* line 122, ../scss/_main.scss */
 #items li a:active {
   transform: scale(1.025);
 }
-/* line 124, ../scss/_main.scss */
+/* line 130, ../scss/_main.scss */
 #items li.ui-sortable-helper a {
   cursor: move;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
-/* line 130, ../scss/_main.scss */
+/* line 136, ../scss/_main.scss */
 #items li.ui-state-highlight {
   height: 50px;
   opacity: .2;
-  max-width: 530px;
+  max-width: 620px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 138, ../scss/_main.scss */
+/* line 144, ../scss/_main.scss */
 #items li {
   font-size: 20px;
 }
@@ -516,42 +521,6 @@ nav.colors ul li a.purple {
 /* line 19, ../scss/_colors.scss */
 #app.black #items li a {
   background: #000;
-}
-/* line 23, ../scss/_colors.scss */
-#app.black #items li:first-child a, #app.black #items li:nth-child(2) a {
-  background: #bc3ada;
-}
-/* line 27, ../scss/_colors.scss */
-#app.black #items li:nth-child(3) a, #app.black #items li:nth-child(4) a {
-  background: #e447ab;
-}
-/* line 31, ../scss/_colors.scss */
-#app.black #items li:nth-child(5) a, #app.black #items li:nth-child(6) a {
-  background: #f75092;
-}
-/* line 35, ../scss/_colors.scss */
-#app.black #items li:nth-child(7) a, #app.black #items li:nth-child(8) a {
-  background: #ff606d;
-}
-/* line 39, ../scss/_colors.scss */
-#app.black #items li:nth-child(9) a, #app.black #items li:nth-child(10) a {
-  background: #fe7244;
-}
-/* line 43, ../scss/_colors.scss */
-#app.black #items li:nth-child(10) a, #app.black #items li:nth-child(11) a {
-  background: #f58907;
-}
-/* line 47, ../scss/_colors.scss */
-#app.black #items li:nth-child(12) a, #app.black #items li:nth-child(13) a {
-  background: #f2a900;
-}
-/* line 51, ../scss/_colors.scss */
-#app.black #items li:nth-child(14) a, #app.black #items li:nth-child(15) a {
-  background: #edc800;
-}
-/* line 55, ../scss/_colors.scss */
-#app.black #items li:nth-child(16) a, #app.black #items li:nth-child(17) a {
-  background: #b4c700;
 }
 /* line 59, ../scss/_colors.scss */
 #app.black li.ui-state-highlight {

@@ -38,7 +38,7 @@ form input{
   border: none;
   border-bottom: 3px solid $black;
   width: calc(100% - 20px);
-  max-width: 510px;
+  max-width: 600px;
   margin: 0;
 
   text-align: center;
@@ -56,7 +56,7 @@ form input{
  list-style: none;
  display: flex;
  flex-flow: column nowrap;
- max-width: 530px;
+ max-width: 620px;
 
 &.purple li a{
   background: $purple;
@@ -65,14 +65,18 @@ form input{
 
  li{
   margin-bottom: 1px;
+
   span.handle{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     border-right: 1px solid #fff;
-    padding: 11px;
-    margin-top: -10px;
-    margin-bottom: -12px;
-    margin-left: -10px;
-    margin-right: 10px;
+    padding: 0 11px;
+    margin-top: -3px;
+    top: 0;
+    bottom: 0;
+    left: 0;
   }
 
   &.done{
@@ -87,6 +91,7 @@ form input{
     color: #a9a9a9;
     background: #efefef !important;
     text-decoration: line-through;
+    padding-left: 10px;
   }
 
  }
@@ -96,12 +101,13 @@ form input{
   font-weight: 700;
   display: block;
   word-wrap: break-word;
-  padding: 10px;
+  padding: 10px 10px 10px 60px;
   text-decoration: none;
   color: $white;
   transition: all .1s ease-in-out;
   text-align: left;
 
+  position: relative;
 
   -webkit-hyphens: auto;
    -moz-hyphens: auto;
@@ -130,7 +136,7 @@ form input{
  li.ui-state-highlight{
   height: 50px;
   opacity: .2;
-  max-width: 530px;
+  max-width: 620px;
   margin-left: auto;
   margin-right: auto;
  }
