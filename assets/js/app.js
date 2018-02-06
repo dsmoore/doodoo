@@ -43,5 +43,5 @@ function startup () {
       $("#all").html(contentsOfOldDiv);
      }
 
-    // self.setInterval (function () {savetext ()}, 1000); //call every second
+    self.setInterval (function () {savetext ()}, 1000); //call every second
   }
