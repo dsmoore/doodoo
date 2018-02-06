@@ -11,50 +11,13 @@
 
   // Black
   &.black form input{
-    border-color: $black;
+    background: $black;
     outline: $black;
-    color: $black;
   }
 
   &.black #items li a{
     background: $black;
   }
-
-  // &.black #items li:first-child a, &.black #items li:nth-child(2) a{
-  //   background: #bc3ada;
-  // }
-
-  // &.black #items li:nth-child(3) a, &.black #items li:nth-child(4) a{
-  //   background: #e447ab;
-  // }
-
-  // &.black #items li:nth-child(5) a, &.black #items li:nth-child(6) a{
-  //   background: #f75092;
-  // }
-
-  // &.black #items li:nth-child(7) a, &.black #items li:nth-child(8) a{
-  //   background: #ff606d;
-  // }
-
-  // &.black #items li:nth-child(9) a, &.black #items li:nth-child(10) a{
-  //   background: #fe7244;
-  // }
-
-  // &.black #items li:nth-child(10) a, &.black #items li:nth-child(11) a{
-  //   background: #f58907;
-  // }
-
-  // &.black #items li:nth-child(12) a, &.black #items li:nth-child(13) a{
-  //   background: #f2a900;
-  // }
-
-  // &.black #items li:nth-child(14) a, &.black #items li:nth-child(15) a{
-  //   background: #edc800;
-  // }
-
-  // &.black #items li:nth-child(16) a, &.black #items li:nth-child(17) a{
-  //   background: #b4c700;
-  // }
 
   &.black li.ui-state-highlight{
     opacity: .1;
@@ -64,9 +27,8 @@
 
   // Purple
   &.purple form input{
-    border-color: $purple;
+    background: $purple;
     outline: $purple;
-    color: $purple;
   }
 
   &.purple #items li a{
@@ -80,9 +42,8 @@
 
   // Red
   &.red form input{
-    border-color: $red;
+    background: $red;
     outline: $red;
-    color: $red;
   }
 
   &.red #items li a{

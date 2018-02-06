@@ -17,7 +17,6 @@ $( document ).ready(function() {
     $(this).parent().toggleClass('done');
   });
 
-
   $('#items').sortable({
       placeholder: "ui-state-highlight",
       handle: ".handle",
@@ -25,27 +24,6 @@ $( document ).ready(function() {
   });
 
   $( "#items" ).disableSelection();
-
-  $('body').on('click', 'a.black', function() {
-    $(this).toggleClass('active');
-    $('#app').addClass('black');
-    $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('purple red');
-  });
-
-  $('body').on('click', 'a.red', function() {
-    $(this).toggleClass('active');
-    $('#app').addClass('red');
-    $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black purple');
-  });
-
-    $('body').on('click', 'a.purple', function() {
-    $(this).toggleClass('active');
-    $('#app').addClass('purple');
-    $('nav.colors li a').not(this).removeClass('active');
-    $('#app').removeClass('black red');
-  });
 
 });
 
@@ -65,5 +43,5 @@ function startup () {
       $("#all").html(contentsOfOldDiv);
      }
 
-    self.setInterval (function () {savetext ()}, 1000); //call every second
+    // self.setInterval (function () {savetext ()}, 1000); //call every second
   }
