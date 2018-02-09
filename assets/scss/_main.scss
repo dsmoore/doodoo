@@ -1,27 +1,6 @@
 #app{
-
-    h1{
-      position: fixed;
-      padding: 5px;
-      top: 0;
-      font-size: 16px;
-      text-align: left;
-      z-index: 1000;
-      background: $white;
-    }
-
-    #items{
-      // padding-left: 30px;
-      // padding-right: 30px;
-      // li a{
-      //   transform: scale(.8);
-      // }
-    }
-
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    align-content: center;
+  position: relative;
+  z-index: 0;
 }
 
 form{
@@ -38,15 +17,14 @@ form button{
 }
 
 form input{
-  padding: 10px;
+  margin: 0 0 1px 0;
+  padding: 15px;
   border: none;
-  border-bottom: 1px solid $white;
-  width: calc(100% - 20px);
-  max-width: 600px;
-  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
   color: $white;
 
-  text-align: center;
   font-family: $base-font;
   font-size: 20px;
   -webkit-style: none !important;
@@ -73,7 +51,11 @@ form input{
  list-style: none;
  display: flex;
  flex-flow: column nowrap;
- max-width: 620px;
+ max-width: 420px;
+ background: #333;
+
+ position: relative;
+ z-index: 200;
 
 &.purple li a{
   background: $purple;
@@ -82,18 +64,6 @@ form input{
 
  li{
   margin-bottom: 1px;
-
-  span.handle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    border-right: 1px solid #fff;
-    padding: 0 11px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
 
   // &.done{
   //   order: 100;
@@ -117,7 +87,7 @@ form input{
   font-weight: 700;
   display: block;
   word-wrap: break-word;
-  padding: 10px 10px 10px 60px;
+  padding: 15px;
   text-decoration: none;
   color: $white;
   transition: all .1s ease-in-out;
@@ -132,11 +102,11 @@ form input{
   width: auto;
 
   &:hover{
-    // transform: scale(.95);
+    background: #666;
   }
 
   &:active{
-   transform: scale(1.025);
+   transform: scale(.98);
    // text-decoration: line-through;
    // cursor: wait;
   }
@@ -144,9 +114,9 @@ form input{
  }
 
  li.ui-sortable-helper a{
-   cursor: move;
-   cursor: -moz-grab;
-   cursor: -webkit-grab;
+   cursor: grabbing;
+   cursor: -moz-grabbing;
+   cursor: -webkit-grabbing;
  }
 
  li.ui-state-highlight{
@@ -162,5 +132,26 @@ form input{
  }
 
 
+}
 
+// Clear
+#clear{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #191818;
+}
+
+#ptr{
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+ p{
+  padding: 25px;
+  color: $dark-gray;
+ }
 }

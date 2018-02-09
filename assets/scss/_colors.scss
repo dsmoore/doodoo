@@ -33,6 +33,9 @@
 
   &.purple #items li a{
     background: $purple;
+    &:hover{
+      opacity: .8;
+    }
   }
 
   &.purple li.ui-state-highlight{

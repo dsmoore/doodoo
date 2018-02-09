@@ -1,47 +1,64 @@
 $( document ).ready(function() {
 
+
   $('form').submit(function () {
     var task = $.trim($('input').val());
     if (task === '') {
-        alertify.alert('Ooops! Make sure you add an item.');
         return false;
     } else {
       var new_task = $('#input').val();
-      $('#items').prepend('<li><a href="javascript:;"><span class="handle">&#9776;</span>'+new_task+'</a></li>');
+      $('#items').prepend('<li><a href="javascript:;" class="item"><span contenteditable="true" class="edit">'+new_task+'</span></a></li>');
       $('#input').val('');
       return false;
     }
   });
 
-  $('body').on('click', '#items li a', function() {
+  $('body').on('dblclick', '#items li a', function() {
     $(this).parent().toggleClass('done');
   });
 
   $('#items').sortable({
       placeholder: "ui-state-highlight",
-      handle: ".handle",
-      scroll: true
+      handle: ".item",
+      scroll: true,
+      cancel: 'input,textarea,button,select,option,[contenteditable]'
   });
 
-  $( "#items" ).disableSelection();
 
 });
 
+    window.onload = function() {
+      WebPullToRefresh.init( {
+          loadingFunction: exampleLoadingFunction
+      } );
+    };
+
+    var exampleLoadingFunction = function() {
+        return new Promise( function( resolve, reject ) {
+
+            if ( true /* if the loading worked */ ) {
+                resolve();
+                $('#items li.done').remove();
+                alertify.alert('All clear, captian!');
+            } else {
+                reject();
+                alertify.alert('Nothing to clear.');
+            }
+        } );
+    };
+
 // Local Storage
 function savetext () {
-  localStorage["all"] = JSON.stringify($("#all").html());
+  localStorage["app"] = JSON.stringify($("#app").html());
   }
 
 function startup () {
 
-    $('body').on('click', 'a.clear', function() {
-      $('#items li.done').remove();
-    });
-
-   if (localStorage["all"] != null) {
-      var contentsOfOldDiv = JSON.parse(localStorage["all"]);
-      $("#all").html(contentsOfOldDiv);
+   if (localStorage["app"] != null) {
+      var contentsOfOldDiv = JSON.parse(localStorage["app"]);
+      $("#app").html(contentsOfOldDiv);
      }
 
-    self.setInterval (function () {savetext ()}, 1000); //call every second
+    // self.setInterval (function () {savetext ()}, 1000); //call every second
   }
+
