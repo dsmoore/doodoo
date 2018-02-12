@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
 // Typography
-$base-font:  "filson-soft",sans-serif;
+$base-font: 'Archivo Black', sans-serif;
 
 $white: #fff;
 $black: #000;
@@ -17,23 +19,24 @@ $break-big: 1200px;
 $break-med: 800px;
 $break-small: 500px;
 
+html{
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
 body{
  text-align: center;
- background: #000;
+ background: black;
 }
 
-h1{
-  font-family: $base-font;
-  font-size: 50px;
-  width: 100%;
-  font-weight: 700;
-  top: 25px;
-  a{
-    font-family: $base-font;
-  }
-}
-
-p{
+p, li, a{
   font-family: $base-font;
 }
 

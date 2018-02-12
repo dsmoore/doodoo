@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 
-
   $('form').submit(function () {
     var task = $.trim($('input').val());
     if (task === '') {
@@ -17,6 +16,10 @@ $( document ).ready(function() {
     $(this).parent().toggleClass('done');
   });
 
+  $('body').on('click', 'a.clear', function() {
+    $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
+  });
+
   $('#items').sortable({
       placeholder: "ui-state-highlight",
       handle: ".item",
@@ -24,28 +27,7 @@ $( document ).ready(function() {
       cancel: 'input,textarea,button,select,option,[contenteditable]'
   });
 
-
 });
-
-    window.onload = function() {
-      WebPullToRefresh.init( {
-          loadingFunction: exampleLoadingFunction
-      } );
-    };
-
-    var exampleLoadingFunction = function() {
-        return new Promise( function( resolve, reject ) {
-
-            if ( true /* if the loading worked */ ) {
-                resolve();
-                $('#items li.done').remove();
-                alertify.alert('All clear, captian!');
-            } else {
-                reject();
-                alertify.alert('Nothing to clear.');
-            }
-        } );
-    };
 
 // Local Storage
 function savetext () {
@@ -59,6 +41,6 @@ function startup () {
       $("#app").html(contentsOfOldDiv);
      }
 
-    // self.setInterval (function () {savetext ()}, 1000); //call every second
+    self.setInterval (function () {savetext ()}, 1000); //call every second
   }
 
