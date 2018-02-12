@@ -92,6 +92,8 @@ form input{
 
   width: auto;
 
+  -webkit-user-modify:read-write;
+
   span{
     font-family: $base-font;
   }

@@ -12,7 +12,7 @@ $( document ).ready(function() {
     }
   });
 
-  $('body').on('dblclick', '#items li a', function() {
+  $('body').on('click', '.item', function() {
     $(this).parent().toggleClass('done');
   });
 
@@ -20,25 +20,11 @@ $( document ).ready(function() {
     $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
   });
 
-  var done = 0;
-  $("#items li a").on("click", function() {
-      if (touchtime == 0) {
-          done = new Date().getTime();
-      } else {
-          if (((new Date().getTime()) - touchtime) < 800) {
-              alert("double clicked");
-              done = 0;
-          } else {
-              done = new Date().getTime();
-          }
-      }
-  });
-
   $('#items').sortable({
       placeholder: "ui-state-highlight",
       handle: ".item",
       scroll: true,
-      cancel: 'input,textarea,button,select,option,[contenteditable]'
+      cancel: '[contenteditable]'
   });
 
 });
