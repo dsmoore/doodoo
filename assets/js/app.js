@@ -16,10 +16,6 @@ $( document ).ready(function() {
     $(this).parent().toggleClass('done');
   });
 
-  $('body').on('click', '.edit', function() {
-    $(this).parent().removeClass('done');
-  });
-
   $('body').on('click', 'a.clear', function() {
     $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
   });
