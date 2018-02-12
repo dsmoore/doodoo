@@ -20,6 +20,20 @@ $( document ).ready(function() {
     $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
   });
 
+  var done = 0;
+  $("#items li a").on("click", function() {
+      if (touchtime == 0) {
+          done = new Date().getTime();
+      } else {
+          if (((new Date().getTime()) - touchtime) < 800) {
+              alert("double clicked");
+              done = 0;
+          } else {
+              done = new Date().getTime();
+          }
+      }
+  });
+
   $('#items').sortable({
       placeholder: "ui-state-highlight",
       handle: ".item",
@@ -31,16 +45,18 @@ $( document ).ready(function() {
 
 // Local Storage
 function savetext () {
-  localStorage["app"] = JSON.stringify($("#app").html());
-  }
+localStorage["app"] = JSON.stringify($("#app").html());
+}
 
 function startup () {
 
-   if (localStorage["app"] != null) {
-      var contentsOfOldDiv = JSON.parse(localStorage["app"]);
-      $("#app").html(contentsOfOldDiv);
-     }
+ if (localStorage["app"] != null) {
+  var contentsOfOldDiv = JSON.parse(localStorage["app"]);
+  $("#app").html(contentsOfOldDiv);
+ }
 
-    self.setInterval (function () {savetext ()}, 1000); //call every second
-  }
+  self.setInterval (function () {savetext ()}, 1000); //call every second
+}
 
+// Run app
+startup ();

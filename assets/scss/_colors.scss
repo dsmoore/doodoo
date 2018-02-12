@@ -32,29 +32,10 @@
   }
 
   &.purple #items li a{
-    background: $purple;
     &:hover{
       opacity: .8;
     }
   }
 
-  &.purple li.ui-state-highlight{
-    background: $purple;
-  }
-
-
-  // Red
-  &.red form input{
-    background: $red;
-    outline: $red;
-  }
-
-  &.red #items li a{
-    background: $red;
-  }
-
-  &.red li.ui-state-highlight{
-    background: $red;
-  }
 
 }
