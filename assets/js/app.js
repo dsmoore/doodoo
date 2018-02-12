@@ -16,18 +16,27 @@ $( document ).ready(function() {
     $(this).parent().toggleClass('done');
   });
 
+  $('body').on('click', '.edit', function() {
+    $(this).parent().removeClass('done');
+  });
+
   $('body').on('click', 'a.clear', function() {
     $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
   });
 
   $('#items').sortable({
-      placeholder: "ui-state-highlight",
       handle: ".item",
+      axis: 'y',
       scroll: true,
-      cancel: '[contenteditable]'
+      cancel: '.edit'
   });
 
 });
+
+
+$(document).on("click",".edit",function(){
+    $(this).focus()
+})
 
 // Local Storage
 function savetext () {
