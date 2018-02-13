@@ -22,5 +22,51 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
 !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 
 // Kill Double Click Zoom
-(function($){var IS_IOS=/iphone|ipad/i.test(navigator.userAgent);$.fn.nodoubletapzoom=function(){if(IS_IOS)
-$(this).bind('touchstart',function preventZoom(e){var t2=e.timeStamp,t1=$(this).data('lastTouch')||t2,dt=t2-t1,fingers=e.originalEvent.touches.length;$(this).data('lastTouch',t2);if(!dt||dt>500||fingers>1)return;e.preventDefault();$(this).trigger('click').trigger('click')})}})(jQuery)
+// (function($){var IS_IOS=/iphone|ipad/i.test(navigator.userAgent);$.fn.nodoubletapzoom=function(){if(IS_IOS)
+// $(this).bind('touchstart',function preventZoom(e){var t2=e.timeStamp,t1=$(this).data('lastTouch')||t2,dt=t2-t1,fingers=e.originalEvent.touches.length;$(this).data('lastTouch',t2);if(!dt||dt>500||fingers>1)return;e.preventDefault();$(this).trigger('click').trigger('click')})}})(jQuery)
+
+/*!
+ * jQuery Double Tap Plugin.
+ *
+ * Copyright (c) 2010 Raul Sanchez (http://www.appcropolis.com)
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ */
+
+(function($){
+    // Determine if we on iPhone or iPad
+    var isiOS = false;
+    var agent = navigator.userAgent.toLowerCase();
+    if(agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0){
+           isiOS = true;
+    }
+
+    $.fn.doubletap = function(onDoubleTapCallback, onTapCallback, delay){
+        var eventName, action;
+        delay = delay == null? 500 : delay;
+        eventName = isiOS == true? 'touchend' : 'click';
+
+        $(this).bind(eventName, function(event){
+            var now = new Date().getTime();
+            var lastTouch = $(this).data('lastTouch') || now + 1 /** the first time this will make delta a negative number */;
+            var delta = now - lastTouch;
+            clearTimeout(action);
+            if(delta<500 && delta>0){
+                if(onDoubleTapCallback != null && typeof onDoubleTapCallback == 'function'){
+                    onDoubleTapCallback(event);
+                }
+            }else{
+                $(this).data('lastTouch', now);
+                action = setTimeout(function(evt){
+                    if(onTapCallback != null && typeof onTapCallback == 'function'){
+                        onTapCallback(evt);
+                    }
+                    clearTimeout(action);   // clear the timeout
+                }, delay, [event]);
+            }
+            $(this).data('lastTouch', now);
+        });
+    };
+})(jQuery);
