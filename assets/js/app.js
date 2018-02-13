@@ -27,12 +27,24 @@ $( document ).ready(function() {
       cancel: '.edit'
   });
 
+  $('body').on("click",".edit",function(){
+      $(this).focus()
+  })
+
+  $(function(){
+
+   // WebKit contentEditable focus bug workaround:
+   if(/AppleWebKit\/([\d.]+)/.exec(navigator.userAgent)) {
+    var editableFix = $('<input style="width:1px;height:1px;border:none;margin:0;padding:0;" tabIndex="-1">').appendTo('html');
+    $('[contenteditable]').blur(function () {
+        editableFix[0].setSelectionRange(0, 0);
+        editableFix.blur();
+    });
+   }
+  });
+
 });
 
-
-$(document).on("click",".edit",function(){
-    $(this).focus()
-})
 
 // Local Storage
 function savetext () {
@@ -48,18 +60,6 @@ function startup () {
 
   self.setInterval (function () {savetext ()}, 1000); //call every second
 }
-
-$(function(){
-
- // WebKit contentEditable focus bug workaround:
- if(/AppleWebKit\/([\d.]+)/.exec(navigator.userAgent)) {
-  var editableFix = $('<input style="width:1px;height:1px;border:none;margin:0;padding:0;" tabIndex="-1">').appendTo('html');
-  $('[contenteditable]').blur(function () {
-      editableFix[0].setSelectionRange(0, 0);
-      editableFix.blur();
-  });
- }
-});
 
 // Run app
 startup ();
