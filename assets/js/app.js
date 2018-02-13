@@ -1,25 +1,19 @@
 $( document ).ready(function() {
 
+  // Sort
   $('form').submit(function () {
-    var task = $.trim($('input').val());
+    var task = $.trim($('#create').val());
     if (task === '') {
         return false;
     } else {
-      var new_task = $('#input').val();
+      var new_task = $('#create').val();
       $('#items').prepend('<li><a href="javascript:;" class="item"><span contenteditable="true" class="edit">'+new_task+'</span></a></li>');
-      $('#input').val('');
+      $('#create').val('');
       return false;
     }
   });
 
-  $('body').on('click', '.item', function() {
-    $(this).parent().toggleClass('done');
-  });
-
-  $('body').on('click', 'a.clear', function() {
-    $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
-  });
-
+  // Sort
   $('#items').sortable({
       handle: ".item",
       axis: 'y',
@@ -27,21 +21,27 @@ $( document ).ready(function() {
       cancel: '.edit'
   });
 
-  $('body').on("click",".edit",function(){
-      $(this).focus()
-  })
+  // Done
+  var agent = navigator.userAgent.toLowerCase();
+  if(agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0){
 
-  $(function(){
-
-   // WebKit contentEditable focus bug workaround:
-   if(/AppleWebKit\/([\d.]+)/.exec(navigator.userAgent)) {
-    var editableFix = $('<input style="width:1px;height:1px;border:none;margin:0;padding:0;" tabIndex="-1">').appendTo('html');
-    $('[contenteditable]').blur(function () {
-        editableFix[0].setSelectionRange(0, 0);
-        editableFix.blur();
+    $('selector').doubletap(function() {
+      $(this).parent().toggleClass('done');
     });
-   }
+
+  } else{
+
+    $('body').on('dblclick', '.item', function() {
+      $(this).parent().toggleClass('done');
+    });
+
+  }
+
+  // Clear
+  $('body').on('click', 'a.clear', function() {
+    $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
   });
+
 
 });
 
@@ -58,7 +58,7 @@ function startup () {
   $("#app").html(contentsOfOldDiv);
  }
 
-  self.setInterval (function () {savetext ()}, 1000); //call every second
+  // self.setInterval (function () {savetext ()}, 1000); //call every second
 }
 
 // Run app
