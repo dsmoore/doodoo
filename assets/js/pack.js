@@ -24,14 +24,3 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
 // Kill Double Click Zoom
 (function($){var IS_IOS=/iphone|ipad/i.test(navigator.userAgent);$.fn.nodoubletapzoom=function(){if(IS_IOS)
 $(this).bind('touchstart',function preventZoom(e){var t2=e.timeStamp,t1=$(this).data('lastTouch')||t2,dt=t2-t1,fingers=e.originalEvent.touches.length;$(this).data('lastTouch',t2);if(!dt||dt>500||fingers>1)return;e.preventDefault();$(this).trigger('click').trigger('click')})}})(jQuery)
-
-/*!
- * jQuery Double Tap Plugin.
- *
- * Copyright (c) 2010 Raul Sanchez (http://www.appcropolis.com)
- *
- * Dual licensed under the MIT and GPL licenses:
- * http://www.opensource.org/licenses/mit-license.php
- * http://www.gnu.org/licenses/gpl.html
- */
-!function(t){var n=!1,e=navigator.userAgent.toLowerCase();(e.indexOf("iphone")>=0||e.indexOf("ipad")>=0)&&(n=!0),t.fn.doubletap=function(e,i,a){var o,u;a=null==a?500:a,o=1==n?"touchend":"click",t(this).bind(o,function(n){var o=(new Date).getTime(),c=o-(t(this).data("lastTouch")||o+1);clearTimeout(u),c<500&&c>0?null!=e&&"function"==typeof e&&e(n):(t(this).data("lastTouch",o),u=setTimeout(function(t){null!=i&&"function"==typeof i&&i(t),clearTimeout(u)},a,[n])),t(this).data("lastTouch",o)})}}(jQuery);
