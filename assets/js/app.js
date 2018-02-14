@@ -25,7 +25,7 @@ $( document ).ready(function() {
   var agent = navigator.userAgent.toLowerCase();
   if(agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0){
 
-    $('selector').doubletap(function() {
+    $('.item').doubletap(function() {
       $(this).parent().toggleClass('done');
     });
 
