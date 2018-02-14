@@ -7,23 +7,23 @@ $( document ).ready(function() {
         return false;
     } else {
       var new_task = $('#create').val();
-      $('#items').prepend('<li><a href="javascript:;" id="item"><span contenteditable="true" class="edit">'+new_task+'</span></a></li>');
+      $('#items').prepend('<li><a href="javascript:;" class="item"><div contenteditable="true" class="edit">'+new_task+'</div><span class="check"></span></a></li>');
       $('#create').val('');
       return false;
     }
   });
 
   // Sort
-  // $('#items').sortable({
-  //     handle: "#item",
-  //     axis: 'y',
-  //     scroll: true,
-  //     cancel: '.edit'
-  // });
+  $('#items').sortable({
+      handle: ".check",
+      axis: 'y',
+      scroll: true,
+      cancel: '.edit'
+  });
 
   // Done
-  $('body').on('click', '#item', function() {
-    $(this).parent().toggleClass('done');
+  $('body').on('click', '.check', function() {
+    $(this).parent().parent().toggleClass('done');
   });
 
   // Clear
@@ -33,17 +33,16 @@ $( document ).ready(function() {
 
 });
 
-
 // Local Storage
 function savetext () {
-localStorage["app"] = JSON.stringify($("#app").html());
+localStorage["app"] = JSON.stringify($("#items").html());
 }
 
 function startup () {
 
  if (localStorage["app"] != null) {
   var contentsOfOldDiv = JSON.parse(localStorage["app"]);
-  $("#app").html(contentsOfOldDiv);
+  $("#items").html(contentsOfOldDiv);
  }
 
   self.setInterval (function () {savetext ()}, 1000); //call every second

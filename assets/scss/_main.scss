@@ -1,11 +1,8 @@
+*{outline: none;}
+
 #app{
   position: relative;
   z-index: 0;
-
-  &.purple #items li a{
-    background: $purple;
-  }
-
 }
 
 form{
@@ -67,6 +64,10 @@ form input#create{
     opacity: .4;
   }
 
+  &.done a .check{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItY2hlY2stY2lyY2xlIj48cGF0aCBkPSJNMjIgMTEuMDdWMTJhMTAgMTAgMCAxIDEtNS45My05LjE0Ij48L3BhdGg+PHBvbHlsaW5lIHBvaW50cz0iMjMgMyAxMiAxNCA5IDExIj48L3BvbHlsaW5lPjwvc3ZnPg==);
+  }
+
   &:hover{
     opacity: .8;
   }
@@ -75,12 +76,15 @@ form input#create{
  }
 
  li a{
+
+  background-color: #222;
+
   font-family: $base-font;
   display: block;
   word-wrap: break-word;
   padding: 15px;
   text-decoration: none;
-  color: $white;
+  color: $purple;
   transition: all .15s ease-in-out;
   text-align: left;
 
@@ -94,12 +98,30 @@ form input#create{
 
   -webkit-user-modify:read-write;
 
-  span.edit{
+  div.edit{
     font-family: $base-font;
+    padding-right: 50px;
+    display: block;
+    outline-color: $purple;
   }
 
-  &:active{
-   transform: scale(.98);
+  span.check{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 1000;
+    background-color: $purple;
+
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItY2lyY2xlIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCI+PC9jaXJjbGU+PC9zdmc+);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:active{
+      background-size: 40% 40%;
+    }
+
   }
 
  }
@@ -129,6 +151,7 @@ a.clear{
   display: inline-block;
   margin: 15px auto;
   padding: 10px;
+  min-width: 200px;
   color: #666;
   border: 2px solid #666;
   font-size: 12px;
