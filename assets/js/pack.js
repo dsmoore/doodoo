@@ -34,39 +34,4 @@ $(this).bind('touchstart',function preventZoom(e){var t2=e.timeStamp,t1=$(this).
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
  */
-
-(function($){
-    // Determine if we on iPhone or iPad
-    var isiOS = false;
-    var agent = navigator.userAgent.toLowerCase();
-    if(agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0){
-           isiOS = true;
-    }
-
-    $.fn.doubletap = function(onDoubleTapCallback, onTapCallback, delay){
-        var eventName, action;
-        delay = delay == null? 500 : delay;
-        eventName = isiOS == true? 'touchend' : 'click';
-
-        $(this).bind(eventName, function(event){
-            var now = new Date().getTime();
-            var lastTouch = $(this).data('lastTouch') || now + 1 /** the first time this will make delta a negative number */;
-            var delta = now - lastTouch;
-            clearTimeout(action);
-            if(delta<500 && delta>0){
-                if(onDoubleTapCallback != null && typeof onDoubleTapCallback == 'function'){
-                    onDoubleTapCallback(event);
-                }
-            }else{
-                $(this).data('lastTouch', now);
-                action = setTimeout(function(evt){
-                    if(onTapCallback != null && typeof onTapCallback == 'function'){
-                        onTapCallback(evt);
-                    }
-                    clearTimeout(action);   // clear the timeout
-                }, delay, [event]);
-            }
-            $(this).data('lastTouch', now);
-        });
-    };
-})(jQuery);
+!function(t){var n=!1,e=navigator.userAgent.toLowerCase();(e.indexOf("iphone")>=0||e.indexOf("ipad")>=0)&&(n=!0),t.fn.doubletap=function(e,i,a){var o,u;a=null==a?500:a,o=1==n?"touchend":"click",t(this).bind(o,function(n){var o=(new Date).getTime(),c=o-(t(this).data("lastTouch")||o+1);clearTimeout(u),c<500&&c>0?null!=e&&"function"==typeof e&&e(n):(t(this).data("lastTouch",o),u=setTimeout(function(t){null!=i&&"function"==typeof i&&i(t),clearTimeout(u)},a,[n])),t(this).data("lastTouch",o)})}}(jQuery);
