@@ -34,7 +34,14 @@ $( document ).ready(function() {
     $('.clear').removeClass('hide');
   }
 
-  // // Done
+  // Done
+  $('body').on('click', '#create', function() {
+
+    bleep.play();
+
+  });
+
+  // Done
   $('body').on('click', '.check', function() {
     $(this).parent().parent().toggleClass('done');
     $('.clear').addClass('hide');
