@@ -26,13 +26,25 @@ $( document ).ready(function() {
       handle: ".check",
       axis: 'y',
       scroll: true,
-      cancel: '.edit'
+      cancel: '.edit',
+      start: function(event,ui){
+        bleep.play();
+      },
+      stop: function(event,ui){
+        bleep.play();
+      }
   });
 
   // No Items Done
   if($("#items").has("li.done").length == 0) {
     $('.clear').removeClass('hide');
   }
+
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+      bleep.play();
+    }
+});
 
   // Done
   $('body').on('click', '#create', function() {
