@@ -1,5 +1,13 @@
 $( document ).ready(function() {
 
+  // Sounds
+  var bleep = document.createElement('audio');
+  bleep.setAttribute('src', 'assets/sounds/bleep.mp3');
+
+  var done = document.createElement('audio');
+  done.setAttribute('src', 'assets/sounds/bleep.mp3');
+
+
   // Sort
   $('form').submit(function () {
     var task = $.trim($('#create').val());
@@ -7,7 +15,7 @@ $( document ).ready(function() {
         return false;
     } else {
       var new_task = $('#create').val();
-      $('#items').append('<li><a href="javascript:;"><div contenteditable="true" class="edit">'+new_task+'</div><div class="check loud-link-click" data-sound="bleep"></div></a></li>');
+      $('#items').append('<li><a href="javascript:;"><div contenteditable="true" class="edit">'+new_task+'</div><div class="check"></div></a></li>');
       $('#create').val('');
       return false;
     }
@@ -30,12 +38,18 @@ $( document ).ready(function() {
   $('body').on('click', '.check', function() {
     $(this).parent().parent().toggleClass('done');
     $('.clear').addClass('hide');
+
+    bleep.play();
+
   });
 
   // Clear
   $('body').on('click', '.clear', function() {
     $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
     $('.clear').addClass('hide');
+
+    done.play();
+
   });
 
 });
