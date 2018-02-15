@@ -7,7 +7,7 @@ $( document ).ready(function() {
         return false;
     } else {
       var new_task = $('#create').val();
-      $('#items').prepend('<li><a href="javascript:;" class="item"><div contenteditable="true" class="edit">'+new_task+'</div><span class="check"></span></a></li>');
+      $('#items').append('<li><a href="javascript:;"><div contenteditable="true" class="edit">'+new_task+'</div><div class="check loud-link-click" data-sound="bleep"></div></a></li>');
       $('#create').val('');
       return false;
     }
@@ -21,14 +21,21 @@ $( document ).ready(function() {
       cancel: '.edit'
   });
 
-  // Done
+  // No Items Done
+  if($("#items").has("li.done").length == 0) {
+    $('.clear').removeClass('hide');
+  }
+
+  // // Done
   $('body').on('click', '.check', function() {
     $(this).parent().parent().toggleClass('done');
+    $('.clear').addClass('hide');
   });
 
   // Clear
-  $('body').on('click', 'a.clear', function() {
+  $('body').on('click', '.clear', function() {
     $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
+    $('.clear').addClass('hide');
   });
 
 });

@@ -3,6 +3,8 @@
 #app{
   position: relative;
   z-index: 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 form{
@@ -19,14 +21,14 @@ form button{
 }
 
 form input#create{
-  margin: 0 0 1px 0;
+  margin: 0 0 60px 0;
   padding: 15px;
   border: none;
   box-sizing: border-box;
   width: 100%;
-  max-width: 420px;
   color: $purple;
   background: transparent;
+  text-align: center;
 
   font-family: $base-font;
   font-size: 20px;
@@ -45,7 +47,6 @@ form input#create{
  list-style: none;
  display: flex;
  flex-flow: column nowrap;
- max-width: 420px;
  background: #111;
 
  position: relative;
@@ -65,7 +66,7 @@ form input#create{
   }
 
   &.done a .check{
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItY2hlY2stY2lyY2xlIj48cGF0aCBkPSJNMjIgMTEuMDdWMTJhMTAgMTAgMCAxIDEtNS45My05LjE0Ij48L3BhdGg+PHBvbHlsaW5lIHBvaW50cz0iMjMgMyAxMiAxNCA5IDExIj48L3BvbHlsaW5lPjwvc3ZnPg==);
+    background-image: url(../images/icon-circle-check.svg);
   }
 
   &:hover{
@@ -105,21 +106,29 @@ form input#create{
     outline-color: $purple;
   }
 
-  span.check{
+  .check{
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     width: 50px;
     z-index: 1000;
-    background-color: $purple;
-
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItY2lyY2xlIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCI+PC9jaXJjbGU+PC9zdmc+);
+    display: inline-block;
+    visibility: visible;
+    background-color: transparent;
+    border: none;
+    background-image: url(../images/icon-circle.svg);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 50% 50%;
+    transition: all .15s ease;
 
     &:active{
       background-size: 40% 40%;
+    }
+
+    &:hover{
+      background-color: $purple;
     }
 
   }
@@ -147,11 +156,14 @@ form input#create{
 }
 
 // Clear
-a.clear{
+.clear{
+  bottom: 0;
+  right: 15px;
+
+  position: fixed;
   display: inline-block;
   margin: 15px auto;
   padding: 10px;
-  min-width: 200px;
   color: #666;
   border: 2px solid #666;
   font-size: 12px;
@@ -159,10 +171,20 @@ a.clear{
   text-transform: uppercase;
   font-weight: bold;
   outline: none;
-  &:hover{
-    background: #222;
+  background: $black;
+
+  transform: scale(0);
+  transition: all .15s ease;
+
+  &.hide{
+    transform: scale(1);
   }
+
+  &:hover{
+    transform: scale(1.05);
+  }
+
   &:active{
-    transform: scale(.9);
+    transform: scale(.995);
   }
 }
