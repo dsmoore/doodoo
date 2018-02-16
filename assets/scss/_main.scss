@@ -5,6 +5,7 @@
   z-index: 0;
   max-width: 800px;
   margin: 0 auto;
+  border-radius: 8px;
 }
 
 form{
@@ -27,8 +28,7 @@ form input#create{
   box-sizing: border-box;
   width: 100%;
   color: $purple;
-  background: transparent;
-  text-align: center;
+  background: #333;
 
   font-family: $base-font;
   font-size: 20px;
@@ -125,6 +125,7 @@ form input#create{
 
     &:active{
       background-size: 40% 40%;
+      background-position: center center;
     }
 
     &:hover{

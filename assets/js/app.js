@@ -4,8 +4,11 @@ $( document ).ready(function() {
   var bleep = document.createElement('audio');
   bleep.setAttribute('src', 'assets/sounds/bleep.mp3');
 
+  var blip = document.createElement('audio');
+  blip.setAttribute('src', 'assets/sounds/click.mp3');
+
   var done = document.createElement('audio');
-  done.setAttribute('src', 'assets/sounds/bleep.mp3');
+  done.setAttribute('src', 'assets/sounds/done.mp3');
 
 
   // Sort
@@ -40,17 +43,20 @@ $( document ).ready(function() {
     $('.clear').removeClass('hide');
   }
 
-$(document).keypress(function(e) {
-    if(e.which == 13) {
-      bleep.play();
-    }
-});
+  $('body').on('click', '.edit', function() {
+    blip.play();
+  });
+
+
+  $(document).keypress(function(e) {
+      if(e.which == 13) {
+        bleep.play();
+      }
+  });
 
   // Done
   $('body').on('click', '#create', function() {
-
-    bleep.play();
-
+    blip.play();
   });
 
   // Done
