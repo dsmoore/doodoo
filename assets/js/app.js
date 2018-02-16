@@ -18,7 +18,7 @@ $( document ).ready(function() {
         return false;
     } else {
       var new_task = $('#create').val();
-      $('#items').append('<li><a href="javascript:;"><div contenteditable="true" class="edit">'+new_task+'</div><div class="check"></div></a></li>');
+      $('#items').append('<li><a href="javascript:;"><div contenteditable="true" class="edit">'+new_task+'</div><div class="check" contenteditable="false"></div></a></li>');
       $('#create').val('');
       return false;
     }
@@ -39,7 +39,7 @@ $( document ).ready(function() {
   });
 
   // No Items Done
-  if($("#items").has("li.done").length == 0) {
+  if($("#items").has("li.done").length == 1) {
     $('.clear').removeClass('hide');
   }
 
@@ -59,19 +59,25 @@ $( document ).ready(function() {
     blip.play();
   });
 
-  // Done
+  // Check
   $('body').on('click', '.check', function() {
     $(this).parent().parent().toggleClass('done');
-    $('.clear').addClass('hide');
+    $('.clear').removeClass('hide');
+
+    // Check for other items
+    if($("#items").has("li.done").length == 0) {
+      $('.clear').addClass('hide');
+    }
 
     bleep.play();
 
   });
 
+
   // Clear
   $('body').on('click', '.clear', function() {
     $('#items li.done').hide('fast', function(){ $('#items li.done').remove(); });
-    $('.clear').addClass('hide');
+    $(this).addClass('hide');
 
     done.play();
 
