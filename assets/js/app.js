@@ -4,11 +4,20 @@ $( document ).ready(function() {
   var bleep = document.createElement('audio');
   bleep.setAttribute('src', 'assets/sounds/bleep.mp3');
 
-  var blip = document.createElement('audio');
-  blip.setAttribute('src', 'assets/sounds/click.mp3');
+  var bloop = document.createElement('audio');
+  bloop.setAttribute('src', 'assets/sounds/bloop.mp3');
+
+  var tick = document.createElement('audio');
+  tick.setAttribute('src', 'assets/sounds/tick.mp3');
+
+  var tuck = document.createElement('audio');
+  tuck.setAttribute('src', 'assets/sounds/tuck.mp3');
+
+  var ding = document.createElement('audio');
+  ding.setAttribute('src', 'assets/sounds/bleep.mp3');
 
   var done = document.createElement('audio');
-  done.setAttribute('src', 'assets/sounds/done.mp3');
+  done.setAttribute('src', 'assets/sounds/greatjob.mp3');
 
 
   // Sort
@@ -31,10 +40,10 @@ $( document ).ready(function() {
       scroll: true,
       cancel: '.edit',
       start: function(event,ui){
-        bleep.play();
+        tick.play();
       },
       stop: function(event,ui){
-        bleep.play();
+        tuck.play();
       }
   });
 
@@ -44,24 +53,28 @@ $( document ).ready(function() {
   }
 
   $('body').on('click', '.edit', function() {
-    blip.play();
+    tick.play();
   });
 
 
   $(document).keypress(function(e) {
       if(e.which == 13) {
-        bleep.play();
+        bloop.play();
       }
   });
 
   // Done
   $('body').on('click', '#create', function() {
-    blip.play();
+    tick.play();
   });
 
-  $('body').on('hover', 'a', function() {
-    blip.play();
-  });
+  // $( ".check" ).hover(
+  //   function() {
+  //     tick.play();
+  //   }, function() {
+  //     tick.play();
+  //   }
+  // );
 
   // Check
   $('body').on('click', '.check', function() {
@@ -76,6 +89,7 @@ $( document ).ready(function() {
     bleep.play();
 
   });
+
 
 
   // Clear

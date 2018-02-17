@@ -31,20 +31,22 @@ form input#create{
   margin: 0 0 60px 0;
   padding: 15px;
   border: none;
+  border-radius: 0px;
   box-sizing: border-box;
   width: 100%;
-  color: $red;
+  color: $white;
   background: #333;
 
   font-family: $base-font;
   font-size: 20px;
+  -webkit-appearance: none !important;
   -webkit-style: none !important;
   transition: all .1s ease-in-out;
   outline: none;
 }
 
 ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
-  color: $red;
+  color: $white;
 }
 
 #items{
@@ -58,10 +60,6 @@ form input#create{
  position: relative;
  z-index: 200;
 
-&.purple li a{
-  background: $purple;
-  color: $white;
-}
 
  li{
   margin-bottom: 1px;
@@ -133,8 +131,7 @@ form input#create{
     // transition: all .15s ease;
 
     &:active{
-      background-size: 40% 40%;
-      background-position: center center;
+      background-size: 48% 48%;
     }
 
     &:hover{
