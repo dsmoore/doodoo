@@ -1,5 +1,9 @@
 *{outline: none;}
-
+// body{
+//   background: url(../images/bg.png) no-repeat center center;
+//   background-size: cover;
+//   background-attachment: fixed;
+// }
 #app{
   position: relative;
   z-index: 0;
@@ -27,7 +31,7 @@ form input#create{
   border: none;
   box-sizing: border-box;
   width: 100%;
-  color: $purple;
+  color: $red;
   background: #333;
 
   font-family: $base-font;
@@ -38,7 +42,7 @@ form input#create{
 }
 
 ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
-  color: $purple;
+  color: $red;
 }
 
 #items{
@@ -62,6 +66,8 @@ form input#create{
   font-family: $base-font;
 
   &.done a{
+    color: #5d5d5d;
+    text-decoration: line-through;
     opacity: .4;
   }
 
@@ -111,7 +117,7 @@ form input#create{
     top: 0;
     right: 0;
     bottom: 0;
-    width: 50px;
+    width: 42px;
     z-index: 1000;
     display: inline-block;
     visibility: visible;
@@ -121,6 +127,7 @@ form input#create{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
+    opacity: .2;
     // transition: all .15s ease;
 
     &:active{
@@ -129,7 +136,7 @@ form input#create{
     }
 
     &:hover{
-      background-color: $purple;
+      opacity: 1;
     }
 
   }
@@ -158,24 +165,29 @@ form input#create{
 
 // Clear
 .clear{
-  bottom: 0;
-  right: 15px;
-
-  position: fixed;
-  display: inline-block;
+  display: block;
   margin: 15px auto;
   padding: 10px;
-  color: #666;
-  border: 2px solid #666;
-  font-size: 12px;
-  border-radius: 4px;
+  line-height: 20px;
   text-transform: uppercase;
   font-weight: bold;
   outline: none;
-  background: $black;
+  border: 0px;
+  background-color: $gray;
 
   transform: scale(1);
   transition: all .15s ease;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  color: $black;
+  border-radius: 4px;
+
+  // position: fixed;
+  // bottom: 0;
+  // right: 15px;
+
 
   &.hide{
     transform: scale(0);

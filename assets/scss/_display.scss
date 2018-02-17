@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+@font-face {
+ font-family: 'chivobold';
+ src: url('../fonts/chivo-bold-webfont.woff2') format('woff2'),
+      url('../fonts/chivo-bold-webfont.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
+}
 
 // Typography
-$base-font: 'Archivo Black', sans-serif;
+$base-font: "chivobold", sans-serif;
 
 $white: #fff;
 $black: #000;

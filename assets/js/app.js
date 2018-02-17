@@ -59,6 +59,10 @@ $( document ).ready(function() {
     blip.play();
   });
 
+  $('body').on('hover', 'a', function() {
+    blip.play();
+  });
+
   // Check
   $('body').on('click', '.check', function() {
     $(this).parent().parent().toggleClass('done');
