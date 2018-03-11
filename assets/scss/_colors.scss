@@ -9,33 +9,21 @@
 
   }
 
-  // Black
-  &.black form input{
+  form input{
     background: $black;
     outline: $black;
   }
 
-  &.black #items li a{
+  #items li a{
     background: $black;
-  }
-
-  &.black li.ui-state-highlight{
-    opacity: .1;
-    background: $black;
-  }
-
-
-  // Purple
-  &.purple form input{
-    background: rgba(0, 0, 0, .4);
-    outline: $purple;
-  }
-
-  &.purple #items li a{
     &:hover{
       opacity: .8;
     }
   }
 
+  li.ui-state-highlight{
+    opacity: .1;
+    background: $black;
+  }
 
 }
