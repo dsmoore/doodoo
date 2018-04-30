@@ -1,50 +1,7 @@
-@font-face {
- font-family: 'chivobold';
- src: url('../fonts/chivo-bold-webfont.woff2') format('woff2'),
-      url('../fonts/chivo-bold-webfont.woff') format('woff');
- font-weight: normal;
- font-style: normal;
-}
-
-// Typography
-$base-font: "chivobold", sans-serif;
-
-$white: #fff;
-$black: #000;
-$light-gray: #efefef;
-$gray: #ddd;
-$dark-gray: #333;
-
-$purple: #6868da;
-$red: #F14E5C;
-$yellow: #e8d354;
-
-
 // Breakpoints
 $break-big: 1200px;
 $break-med: 800px;
 $break-small: 500px;
-
-html{
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-variant-ligatures: none;
-  -webkit-font-variant-ligatures: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-}
-
-body{
- text-align: center;
- background: black;
-}
-
-p, li, a{
-  font-family: $base-font;
-}
 
 // Hide selection
 ::selection {
