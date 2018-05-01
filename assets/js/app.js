@@ -20,16 +20,6 @@ $( document ).ready(function() {
   done.setAttribute('src', 'assets/sounds/greatjob.mp3');
 
 
-  // Header
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 20){
-      $('header').addClass("fixed");
-    }
-    else{
-      $('header').removeClass("fixed");
-    }
-  });
-
   // Sort
   $('form').submit(function () {
     var task = $.trim($('#create').val());
