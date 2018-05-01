@@ -39,6 +39,7 @@ $( document ).ready(function() {
       var new_task = $('#create').val();
       $('#items').append('<li><a href="javascript:;"><div contenteditable="true" class="edit">'+new_task+'</div><div class="check" contenteditable="false"></div></a></li>');
       $('#create').val('');
+      $('#create').blur();
       window.scrollTo(0,document.body.scrollHeight);
       return false;
     }
