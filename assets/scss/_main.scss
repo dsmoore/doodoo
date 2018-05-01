@@ -31,7 +31,7 @@ form input#create{
   box-sizing: border-box;
   width: 100%;
   color: $white;
-  background: #333;
+  background: $dark-gray;
 
   font-size: 1rem;
   -webkit-appearance: none !important;
@@ -50,44 +50,4 @@ form input#create{
 
 ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
   color: $white;
-}
-
-
-// Clear
-.clear{
-  display: block;
-  margin: 0 auto;
-  padding: 15px 0;
-  font-weight: bold;
-  outline: none;
-  border: none;
-  width: 100%;
-  text-transform: uppercase;
-
-  font-family: $base-font;
-  z-index: 300;
-
-  background: linear-gradient(270deg, #6868da, #f14e5c);
-  background-size: 400% 400%;
-
-  -webkit-animation: clearbutton 30s ease infinite;
-  -moz-animation: clearbutton 30s ease infinite;
-  animation: clearbutton 30s ease infinite;
-
-  transform: scale(1);
-  transition: all .15s ease;
-
-  cursor: pointer;
-  color: $white;
-
-  &.hide{
-    transform: scale(0);
-    padding: 0;
-    line-height: 0;
-
-  }
-
-  &:active{
-   transform: scale(1.1);
-  }
 }

@@ -20,6 +20,16 @@ $( document ).ready(function() {
   done.setAttribute('src', 'assets/sounds/greatjob.mp3');
 
 
+  // Header
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 20){
+      $('header').addClass("fixed");
+    }
+    else{
+      $('header').removeClass("fixed");
+    }
+  });
+
   // Sort
   $('form').submit(function () {
     var task = $.trim($('#create').val());
@@ -29,6 +39,7 @@ $( document ).ready(function() {
       var new_task = $('#create').val();
       $('#items').append('<li><a href="javascript:;"><div contenteditable="true" class="edit">'+new_task+'</div><div class="check" contenteditable="false"></div></a></li>');
       $('#create').val('');
+      window.scrollTo(0,document.body.scrollHeight);
       return false;
     }
   });

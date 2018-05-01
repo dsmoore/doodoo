@@ -1,0 +1,79 @@
+body{
+  padding-top: 60px;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  background: $dark-gray;
+  z-index: 500;
+  text-align: center;
+  transition: all .2s ease;
+
+  a.logo{
+    display: block;
+    margin-top: 20px;
+    color: $white;
+  }
+
+  &.fixed{
+    height: 40px;
+
+    a.logo{
+      display: block;
+      margin-top: 15px;
+    }
+
+  }
+
+
+}
+
+// Clear
+.clear{
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  width: 50px;
+  position: absolute;
+  border-radius: 4px;
+
+
+  right: 0;
+  top: 10px;
+  bottom: 10px;
+
+
+  text-transform: uppercase;
+
+  font-family: $base-font;
+  z-index: 300;
+
+  background: linear-gradient(270deg, #6868da, #f14e5c);
+  background-size: 400% 400%;
+
+  -webkit-animation: clearbutton 30s ease infinite;
+  -moz-animation: clearbutton 30s ease infinite;
+  animation: clearbutton 30s ease infinite;
+
+  transform: scale(1);
+  transition: all .15s ease;
+
+  cursor: pointer;
+  color: $white;
+
+  &.hide{
+    transform: scale(0);
+    padding: 0;
+    line-height: 0;
+  }
+
+  &:active{
+   transform: scale(1.1);
+  }
+}
