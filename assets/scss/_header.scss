@@ -27,6 +27,10 @@ header{
       margin-top: 15px;
     }
 
+    .clear{
+      top: 15px;
+    }
+
   }
 
 
@@ -39,27 +43,26 @@ header{
   font-weight: bold;
   outline: none;
   border: none;
-  width: 50px;
+  width: 40px;
   position: absolute;
-  border-radius: 4px;
-
 
   right: 0;
-  top: 10px;
-  bottom: 10px;
-
-
+  top: 15px;
+  bottom: 0px;
+  font-size: .9rem;
   text-transform: uppercase;
 
   font-family: $base-font;
   z-index: 300;
 
-  background: linear-gradient(270deg, #6868da, #f14e5c);
-  background-size: 400% 400%;
+  background: transparent;
 
-  -webkit-animation: clearbutton 30s ease infinite;
-  -moz-animation: clearbutton 30s ease infinite;
-  animation: clearbutton 30s ease infinite;
+  // background: linear-gradient(270deg, #6868da, #f14e5c);
+  // background-size: 400% 400%;
+
+  // -webkit-animation: clearbutton 30s ease infinite;
+  // -moz-animation: clearbutton 30s ease infinite;
+  // animation: clearbutton 30s ease infinite;
 
   transform: scale(1);
   transition: all .15s ease;
